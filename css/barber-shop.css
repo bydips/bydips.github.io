@@ -1,25 +1,140 @@
+/* bydips — Barber shop landing. Dark, masculine, sharp. */
+
+.barber-page {
+  --barber-bg: #0d0d0d;
+  --barber-surface: #1a1a1a;
+  --barber-text: #f5f5f5;
+  --barber-muted: #8c8c8c;
+  --barber-accent: #c9a962;
+  --barber-border: #2a2a2a;
+  font-family: var(--font-sans);
+  background: var(--barber-bg);
+  color: var(--barber-text);
+  min-height: 100vh;
+}
+
+.barber-page .barber-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--barber-border);
+}
+
+.barber-page .barber-logo {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--barber-accent);
+}
+
+.barber-page .barber-nav a {
+  color: var(--barber-muted);
+  font-size: 0.875rem;
+  margin-left: var(--space-4);
+  transition: color 0.2s;
+}
+
+.barber-page .barber-nav a:hover {
+  color: var(--barber-text);
+}
+
 .barber-hero {
-  background:
-    radial-gradient(circle at 20% 20%, #f4f8f1, #f9faf8),
-    linear-gradient(120deg, rgba(29, 77, 54, 0.05), rgba(29, 77, 54, 0));
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
-.barber-hero .btn-primary {
-  margin-top: 1rem;
+.barber-hero .barber-micro {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--barber-accent);
+  margin-bottom: var(--space-2);
 }
 
-.metric-row article {
-  position: relative;
-  overflow: hidden;
+.barber-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 var(--space-3);
 }
 
-.metric-row article::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #1d4d36, #99bba8);
-  opacity: 0.5;
+.barber-hero p {
+  font-size: 1.0625rem;
+  color: var(--barber-muted);
+  margin: 0 0 var(--space-4);
+  line-height: 1.6;
+}
+
+.barber-hero .barber-cta {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  background: var(--barber-accent);
+  color: var(--barber-bg);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 4px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.barber-hero .barber-cta:hover {
+  background: #d4b872;
+  transform: translateY(-1px);
+}
+
+.barber-section {
+  padding: var(--space-6) var(--space-4);
+  border-top: 1px solid var(--barber-border);
+}
+
+.barber-section h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-4);
+  text-align: center;
+}
+
+.barber-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-3);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.barber-service {
+  padding: var(--space-3);
+  background: var(--barber-surface);
+  border: 1px solid var(--barber-border);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.barber-service h3 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-1);
+}
+
+.barber-service p {
+  font-size: 0.8125rem;
+  color: var(--barber-muted);
+  margin: 0;
+}
+
+.barber-footer {
+  padding: var(--space-4);
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--barber-muted);
+  border-top: 1px solid var(--barber-border);
+}
+
+.barber-footer a {
+  color: var(--barber-accent);
 }

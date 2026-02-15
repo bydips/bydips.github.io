@@ -1,6 +1,4 @@
-# Assets Fonts
+# Assets — Fonts
 
-Tempatkan font lokal tambahan bila dibutuhkan.
-Contoh struktur:
-- SpaceGrotesk-Regular.woff2
-- IBMPlexMono-Medium.woff2
+Tempat untuk font kustom (woff2, woff) jika ingin self-host.  
+Saat ini situs memakai Google Fonts (DM Sans, JetBrains Mono).

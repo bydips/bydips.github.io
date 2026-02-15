@@ -1,95 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Katalog | bydips</title>
-    <meta
-      name="description"
-      content="Katalog contoh landing page bydips: barber shop dan coffee shop, dengan pendekatan struktur, copy, dan konversi."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/katalog.css" />
-  </head>
-  <body data-page="katalog">
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a href="index.html" class="logo mono">bydips</a>
-        <button class="menu-toggle mono" type="button" aria-label="Buka navigasi" aria-expanded="false">
-          menu
-        </button>
-        <nav class="site-nav" aria-label="Navigasi utama">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a class="active" href="katalog.html">Katalog</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Katalog bydips — Contoh landing page dan solusi digital untuk berbagai jenis bisnis.">
+  <title>Katalog — bydips</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/katalog.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="bydips home">bydips</a>
+      <nav class="nav">
+        <a href="about.html">Tentang</a>
+        <a href="katalog.html">Katalog</a>
+        <a href="contact.html" class="nav-cta">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-section katalog-intro">
+      <div class="section-head">
+        <span class="mono">Katalog</span>
+        <h1>Contoh landing page</h1>
+        <p>Berbagai tipe bisnis, satu standar: jelas, terstruktur, siap konversi.</p>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section class="section page-intro katalog-intro">
-        <div class="container">
-          <p class="micro-label mono" data-reveal>Portfolio Preview</p>
-          <h1 data-reveal>Katalog landing page dengan standar struktur bydips.</h1>
-          <p data-reveal>
-            Dua contoh ini menunjukkan bagaimana desain, copy, dan CTA disusun supaya pengunjung cepat paham lalu mengambil tindakan.
-          </p>
+    <section class="katalog-gallery">
+      <div class="katalog-grid" id="katalog-grid">
+        <a href="katalog/barber-shop.html" class="katalog-card katalog-card--live">
+          <div class="katalog-card__thumb">
+            <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80" alt="Barber shop" width="600" height="400" loading="lazy">
+            <span class="katalog-card__badge">Detail</span>
+          </div>
+          <div class="katalog-card__meta">
+            <span class="mono">Landing</span>
+            <h3>Barber Shop</h3>
+            <p>Potong rambut & grooming — booking & lokasi</p>
+          </div>
+        </a>
+        <a href="katalog/coffee-shop.html" class="katalog-card katalog-card--live">
+          <div class="katalog-card__thumb">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80" alt="Coffee shop" width="600" height="400" loading="lazy">
+            <span class="katalog-card__badge">Detail</span>
+          </div>
+          <div class="katalog-card__meta">
+            <span class="mono">Landing</span>
+            <h3>Coffee Shop</h3>
+            <p>Kopi & suasana — menu, jam buka, lokasi</p>
+          </div>
+        </a>
+        <div class="katalog-card katalog-card--placeholder">
+          <div class="katalog-card__thumb">
+            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80" alt="Restaurant" width="600" height="400" loading="lazy">
+            <span class="katalog-card__badge katalog-card__badge--soon">Segera</span>
+          </div>
+          <div class="katalog-card__meta">
+            <span class="mono">Landing</span>
+            <h3>Restaurant</h3>
+            <p>Restoran & kafe — menu, reservasi</p>
+          </div>
         </div>
-      </section>
-
-      <section class="section">
-        <div class="container katalog-grid">
-          <article class="katalog-card" data-reveal>
-            <img src="https://picsum.photos/seed/bydips-barber-detail/1280/840" alt="Preview landing page barber shop" />
-            <div>
-              <p class="mono">BARBER SHOP</p>
-              <h2>Fokus booking slot layanan dengan friction minimum.</h2>
-              <p>Flow didesain untuk audience lokal: value offer, paket layanan, testimoni, lalu CTA WhatsApp.</p>
-              <a class="btn btn-primary" href="katalog/barber-shop.html">Buka Detail Halaman</a>
-            </div>
-          </article>
-
-          <article class="katalog-card" data-reveal>
-            <img src="https://picsum.photos/seed/bydips-coffee-detail/1280/840" alt="Preview landing page coffee shop" />
-            <div>
-              <p class="mono">COFFEE SHOP</p>
-              <h2>Brand story yang tetap menutup transaksi.</h2>
-              <p>Narasi produk, social proof, dan CTA pre-order ditata untuk menjaga rasa premium namun tetap ringkas.</p>
-              <a class="btn btn-primary" href="katalog/coffee-shop.html">Buka Detail Halaman</a>
-            </div>
-          </article>
+        <div class="katalog-card katalog-card--placeholder">
+          <div class="katalog-card__thumb">
+            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&q=80" alt="Fitness" width="600" height="400" loading="lazy">
+            <span class="katalog-card__badge katalog-card__badge--soon">Segera</span>
+          </div>
+          <div class="katalog-card__meta">
+            <span class="mono">Landing</span>
+            <h3>Gym / Fitness</h3>
+            <p>Studio & membership — jadwal, harga</p>
+          </div>
         </div>
-      </section>
-
-      <section class="section section-alt">
-        <div class="container guidance" data-reveal>
-          <p class="section-kicker mono">Guidance</p>
-          <h2>Custom layout tiap detail page tetap aman untuk skala.</h2>
-          <ul>
-            <li>Style global ada di <span class="mono">css/style.css</span> untuk konsistensi brand.</li>
-            <li>Halaman katalog pakai <span class="mono">css/katalog.css</span> untuk pola grid showcase.</li>
-            <li>Detail page punya file sendiri: <span class="mono">css/barber-shop.css</span> + <span class="mono">js/barber-shop.js</span>, dan setara untuk coffee shop.</li>
-            <li>Pola ini menjaga fleksibilitas eksperimen tanpa merusak halaman lain.</li>
-          </ul>
+        <div class="katalog-card katalog-card--placeholder">
+          <div class="katalog-card__thumb">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Workshop" width="600" height="400" loading="lazy">
+            <span class="katalog-card__badge katalog-card__badge--soon">Segera</span>
+          </div>
+          <div class="katalog-card__meta">
+            <span class="mono">Landing</span>
+            <h3>Workshop / Kelas</h3>
+            <p>Kursus & event — daftar, jadwal</p>
+          </div>
         </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-wrap">
-        <p><span class="mono">bydips</span> | Structured showcase library.</p>
-        <p class="mono">(c) <span id="currentYear"></span> All rights reserved.</p>
+        <div class="katalog-card katalog-card--placeholder">
+          <div class="katalog-card__thumb">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="Retail" width="600" height="400" loading="lazy">
+            <span class="katalog-card__badge katalog-card__badge--soon">Segera</span>
+          </div>
+          <div class="katalog-card__meta">
+            <span class="mono">Landing</span>
+            <h3>Retail / Toko</h3>
+            <p>Toko fisik & online — produk, kontak</p>
+          </div>
+        </div>
+        <div class="katalog-card katalog-card--placeholder">
+          <div class="katalog-card__thumb">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80" alt="Klinik" width="600" height="400" loading="lazy">
+            <span class="katalog-card__badge katalog-card__badge--soon">Segera</span>
+          </div>
+          <div class="katalog-card__meta">
+            <span class="mono">Landing</span>
+            <h3>Klinik / Kesehatan</h3>
+            <p>Praktik & layanan — booking, info</p>
+          </div>
+        </div>
+        <div class="katalog-card katalog-card--placeholder">
+          <div class="katalog-card__thumb">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Properti" width="600" height="400" loading="lazy">
+            <span class="katalog-card__badge katalog-card__badge--soon">Segera</span>
+          </div>
+          <div class="katalog-card__meta">
+            <span class="mono">Landing</span>
+            <h3>Properti</h3>
+            <p>Unit & listing — galeri, kontak</p>
+          </div>
+        </div>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <script src="js/main.js"></script>
-    <script src="js/katalog.js"></script>
-  </body>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="mono">bydips</span>
+      <span>By Driven Purpose · By Designing Impactful Product Solutions</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/katalog.js"></script>
+</body>
 </html>

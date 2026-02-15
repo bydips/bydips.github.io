@@ -1,107 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | bydips</title>
-    <meta
-      name="description"
-      content="Kenali filosofi studio bydips: founder-led, strategic, structured, dan fokus pada outcome bisnis UMKM."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body data-page="about">
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a href="index.html" class="logo mono">bydips</a>
-        <button class="menu-toggle mono" type="button" aria-label="Buka navigasi" aria-expanded="false">
-          menu
-        </button>
-        <nav class="site-nav" aria-label="Navigasi utama">
-          <a href="index.html">Home</a>
-          <a class="active" href="about.html">About</a>
-          <a href="katalog.html">Katalog</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tentang bydips — Filsafat studio, pendekatan terstruktur, dan founder.">
+  <title>Tentang — bydips</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .about-hero { padding: var(--space-8) var(--space-4) var(--space-6); }
+    .about-hero .section-head { max-width: 36rem; }
+    .about-philosophy { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-4); margin-top: var(--space-6); }
+    .philosophy-card { padding: var(--space-4); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 8px; }
+    .philosophy-card .mono { font-size: 0.75rem; color: var(--color-text-muted); margin-bottom: var(--space-1); }
+    .philosophy-card h3 { font-size: 1rem; font-weight: 600; margin: 0 0 var(--space-2); }
+    .philosophy-card p { font-size: 0.9375rem; color: var(--color-text-muted); margin: 0; line-height: 1.55; }
+    .about-founder { margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--color-border); display: grid; grid-template-columns: auto 1fr; gap: var(--space-4); align-items: start; }
+    .founder-avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; background: var(--color-border); }
+    .founder-bio h3 { font-size: 1.125rem; font-weight: 600; margin: 0 0 var(--space-1); }
+    .founder-bio .role { font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: var(--space-2); }
+    .founder-bio p { font-size: 0.9375rem; color: var(--color-text-muted); margin: 0; max-width: 42ch; }
+    @media (max-width: 600px) { .about-founder { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="bydips home">bydips</a>
+      <nav class="nav">
+        <a href="about.html">Tentang</a>
+        <a href="katalog.html">Katalog</a>
+        <a href="contact.html" class="nav-cta">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-section about-hero">
+      <div class="section-head">
+        <span class="mono">Tentang studio</span>
+        <h1>Bukan agensi. Boutique studio yang terstruktur dan berorientasi hasil.</h1>
+        <p>Kami fokus pada fondasi digital yang jelas — untuk UMKM dan brand yang ingin hadir serius di ranah online.</p>
       </div>
-    </header>
-
-    <main>
-      <section class="section page-intro">
-        <div class="container split-layout">
-          <div>
-            <p class="micro-label mono" data-reveal>Studio Philosophy</p>
-            <h1 data-reveal>By Designing Impactful Product Solutions.</h1>
-            <p data-reveal>
-              bydips dibangun sebagai studio boutique yang menggabungkan ketenangan strategi dan energi eksekusi.
-              Kami tidak mengejar volume proyek. Kami mengejar hasil yang terukur.
-            </p>
-          </div>
-          <aside class="hero-panel" data-reveal>
-            <p class="mono panel-label">Positioning</p>
-            <ul>
-              <li>Founder-led, bukan tim random</li>
-              <li>Premium dalam kualitas, tetap masuk akal dalam biaya</li>
-              <li>Disiplin struktur, bukan layout asal jadi</li>
-              <li>Didesain untuk brand awareness + conversion</li>
-            </ul>
-          </aside>
+      <div class="about-philosophy">
+        <div class="philosophy-card">
+          <span class="mono">Strategic</span>
+          <h3>Dasar dulu, eksekusi kemudian</h3>
+          <p>Struktur dan kejelasan sebelum desain. Setiap proyek dimulai dari tujuan bisnis dan audiens.</p>
         </div>
-      </section>
-
-      <section class="section section-alt">
-        <div class="container">
-          <p class="section-kicker mono" data-reveal>How We Work</p>
-          <h2 data-reveal>Fondasi dulu, visual kemudian, performa selalu.</h2>
-          <div class="timeline">
-            <article data-reveal>
-              <p class="mono">01</p>
-              <h3>Diagnose</h3>
-              <p>Membaca kondisi brand, audiens, dan bottleneck komunikasi digital saat ini.</p>
-            </article>
-            <article data-reveal>
-              <p class="mono">02</p>
-              <h3>Design Systematically</h3>
-              <p>Menyusun struktur halaman, hierarchy copy, dan arah visual yang presisi.</p>
-            </article>
-            <article data-reveal>
-              <p class="mono">03</p>
-              <h3>Deploy with Intent</h3>
-              <p>Merilis halaman dengan standar performa, tracking dasar, dan CTA yang jelas.</p>
-            </article>
-          </div>
+        <div class="philosophy-card">
+          <span class="mono">Performance-first</span>
+          <h3>Web yang ringan dan terukur</h3>
+          <p>Kecepatan dan konversi diutamakan. Bukan tampilan saja — sistem yang siap mendukung pertumbuhan.</p>
         </div>
-      </section>
-
-      <section class="section">
-        <div class="container founder-block" data-reveal>
-          <img src="https://picsum.photos/seed/bydips-founder/900/900" alt="Founder bydips" />
-          <div>
-            <p class="section-kicker mono">Founder Note</p>
-            <h2>Saya percaya bisnis kecil tumbuh cepat saat fondasinya rapi.</h2>
-            <p>
-              Banyak UMKM kehilangan peluang karena pesan brand tidak jelas atau halaman digitalnya tidak terstruktur.
-              Di bydips, setiap keputusan desain harus punya alasan bisnis yang konkret.
-            </p>
-            <a class="btn btn-primary" href="contact.html">Diskusikan Kebutuhan Brand</a>
-          </div>
+        <div class="philosophy-card">
+          <span class="mono">Founder-led</span>
+          <h3>Suara manusia, bukan templat</h3>
+          <p>Komunikasi langsung, keputusan jelas. Tidak ada lapisan birokrasi — Anda berbicara dengan orang yang mengerjakan.</p>
         </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-wrap">
-        <p><span class="mono">bydips</span> | Structured, calm, performance-driven.</p>
-        <p class="mono">(c) <span id="currentYear"></span> All rights reserved.</p>
       </div>
-    </footer>
+      <div class="about-founder">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&h=160&fit=crop" alt="Founder" class="founder-avatar" width="80" height="80" loading="lazy">
+        <div class="founder-bio">
+          <h3>Founder</h3>
+          <p class="role">By Driven Purpose</p>
+          <p>Memimpin strategi dan eksekusi. Fokus pada kejelasan brand, awareness, dan konversi untuk bisnis yang bertumbuh.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <script src="js/main.js"></script>
-  </body>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="mono">bydips</span>
+      <span>By Driven Purpose · By Designing Impactful Product Solutions</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
 </html>

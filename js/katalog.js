@@ -1,14 +1,40 @@
-const katalogCards = document.querySelectorAll('.katalog-card');
+/**
+ * bydips — Katalog gallery.
+ * Card hover, optional keyboard nav, lazy images.
+ */
 
-katalogCards.forEach((card, index) => {
-  card.style.setProperty('--delay', `${index * 50}ms`);
+(function () {
+  'use strict';
 
-  card.addEventListener('mouseenter', () => {
-    card.style.transform = 'translateY(-3px)';
-    card.style.transition = 'transform 0.2s ease';
+  var grid = document.getElementById('katalog-grid');
+  if (!grid) return;
+
+  var cards = grid.querySelectorAll('.katalog-card--live');
+  var current = 0;
+
+  function focusCard(index) {
+    if (index < 0) index = cards.length - 1;
+    if (index >= cards.length) index = 0;
+    current = index;
+    cards[current].focus();
+  }
+
+  grid.addEventListener('keydown', function (e) {
+    if (e.target === grid || !grid.contains(e.target)) return;
+    var card = Array.prototype.indexOf.call(cards, e.target);
+    if (card === -1) return;
+    current = card;
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      focusCard(current - 1);
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      focusCard(current + 1);
+    }
   });
 
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'translateY(0)';
+  // Placeholder cards: no href, show "Segera" state only
+  grid.querySelectorAll('.katalog-card--placeholder').forEach(function (card) {
+    card.setAttribute('tabindex', '-1');
   });
-});
+})();

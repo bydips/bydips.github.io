@@ -1,96 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barber Shop Landing Page | bydips</title>
-    <meta
-      name="description"
-      content="Detail studi landing page barber shop oleh bydips: struktur konten, CTA, dan pendekatan konversi lokal."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/barber-shop.css" />
-  </head>
-  <body data-page="barber-detail">
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a href="../index.html" class="logo mono">bydips</a>
-        <button class="menu-toggle mono" type="button" aria-label="Buka navigasi" aria-expanded="false">
-          menu
-        </button>
-        <nav class="site-nav" aria-label="Navigasi utama">
-          <a href="../index.html">Home</a>
-          <a href="../about.html">About</a>
-          <a class="active" href="../katalog.html">Katalog</a>
-          <a href="../contact.html">Contact</a>
-        </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contoh landing page Barber Shop — bydips katalog.">
+  <title>Barber Shop — Contoh Landing · bydips</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/barber-shop.css">
+</head>
+<body class="barber-page">
+  <header class="barber-header">
+    <a href="../index.html" class="barber-logo">BLADE</a>
+    <nav class="barber-nav">
+      <a href="#layanan">Layanan</a>
+      <a href="#lokasi">Lokasi</a>
+      <a href="../katalog.html" class="barber-back">← Katalog</a>
+    </nav>
+  </header>
+
+  <section class="barber-hero">
+    <p class="barber-micro">Grooming & Style</p>
+    <h1>Potong rambut presisi.<br>Gaya yang konsisten.</h1>
+    <p>Booking jadwal, pilih layanan, dan dapatkan tampilan yang siap untuk hari penting Anda.</p>
+    <a href="#booking" class="barber-cta" id="barber-cta">Booking sekarang</a>
+  </section>
+
+  <section class="barber-section" id="layanan">
+    <h2>Layanan</h2>
+    <div class="barber-grid">
+      <div class="barber-service">
+        <h3>Classic Cut</h3>
+        <p>Potong dasar & rapikan</p>
       </div>
-    </header>
-
-    <main>
-      <section class="section detail-hero barber-hero">
-        <div class="container split-layout">
-          <div>
-            <p class="micro-label mono" data-reveal>Case Detail / Barber Shop</p>
-            <h1 data-reveal>Landing page yang mengubah visitor lokal jadi booking masuk.</h1>
-            <p data-reveal>
-              Tantangan utama: informasi layanan tercecer dan CTA tidak jelas. Solusi: menyatukan pesan layanan,
-              promo, dan jadwal booking ke satu alur yang tegas.
-            </p>
-            <a class="btn btn-primary" href="../contact.html" data-reveal>Request Struktur Serupa</a>
-          </div>
-          <figure class="detail-cover" data-reveal>
-            <img src="https://picsum.photos/seed/bydips-barber-full/1280/960" alt="Visual landing page barber shop" />
-          </figure>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container metric-row">
-          <article data-reveal>
-            <p class="mono">Target</p>
-            <h2>Booking lebih cepat</h2>
-            <p>Mengarahkan pengunjung ke WhatsApp booking dalam kurang dari 3 scroll.</p>
-          </article>
-          <article data-reveal>
-            <p class="mono">Structure</p>
-            <h2>Offer-first layout</h2>
-            <p>Urutan konten: Hero, paket, testimoni, lokasi, CTA sticky.</p>
-          </article>
-          <article data-reveal>
-            <p class="mono">Conversion</p>
-            <h2>CTA kontekstual</h2>
-            <p>Tiap section ditutup aksi relevan agar tidak ada dead-end interaction.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section section-alt">
-        <div class="container">
-          <p class="section-kicker mono" data-reveal>Implementation Note</p>
-          <h2 data-reveal>Halaman ini pakai style dan interaction spesifik tanpa mengganggu sistem utama.</h2>
-          <p data-reveal>
-            Override visual dibuat di <span class="mono">css/barber-shop.css</span>. Interaction tambahan ada di
-            <span class="mono">js/barber-shop.js</span>. Pattern ini aman untuk scaling katalog dengan layout unik.
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-wrap">
-        <p><span class="mono">bydips</span> | Detail showcase.</p>
-        <p class="mono">(c) <span id="currentYear"></span> All rights reserved.</p>
+      <div class="barber-service">
+        <h3>Beard Trim</h3>
+        <p>Rapi jenggot & kumis</p>
       </div>
-    </footer>
+      <div class="barber-service">
+        <h3>Hair + Beard</h3>
+        <p>Paket lengkap</p>
+      </div>
+      <div class="barber-service">
+        <h3>Kids Cut</h3>
+        <p>Khusus anak</p>
+      </div>
+    </div>
+  </section>
 
-    <script src="../js/main.js"></script>
-    <script src="../js/barber-shop.js"></script>
-  </body>
+  <section class="barber-section" id="booking">
+    <h2>Booking</h2>
+    <p style="text-align: center; color: var(--barber-muted); font-size: 0.9375rem; max-width: 400px; margin: 0 auto;">
+      WhatsApp / telepon untuk reservasi: <a href="tel:+6281234567890" style="color: var(--barber-accent);">+62 812 3456 7890</a>
+    </p>
+  </section>
+
+  <section class="barber-section" id="lokasi">
+    <h2>Lokasi & Jam</h2>
+    <p style="text-align: center; color: var(--barber-muted); font-size: 0.9375rem; max-width: 400px; margin: 0 auto;">
+      Jl. Contoh No. 123, Kota Anda<br>
+      Senin–Minggu, 09:00–21:00
+    </p>
+  </section>
+
+  <footer class="barber-footer">
+    Contoh landing page dari <a href="../index.html">bydips</a> · <a href="../contact.html">Butuh yang serupa?</a>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/barber-shop.js"></script>
+</body>
 </html>
