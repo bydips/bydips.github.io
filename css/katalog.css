@@ -1,0 +1,42 @@
+.katalog-intro {
+  border-bottom: 1px solid var(--line);
+}
+
+.katalog-grid {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.katalog-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  background: var(--surface);
+}
+
+.katalog-card h2 {
+  margin: 0.35rem 0 0.7rem;
+}
+
+.katalog-card p + .btn {
+  margin-top: 1rem;
+}
+
+.guidance ul {
+  margin-top: 0.7rem;
+}
+
+@media (max-width: 860px) {
+  .katalog-card {
+    grid-template-columns: 1fr;
+  }
+
+  .katalog-card img {
+    max-height: 280px;
+    width: 100%;
+    object-fit: cover;
+  }
+}

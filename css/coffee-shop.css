@@ -1,0 +1,22 @@
+.coffee-hero {
+  background:
+    radial-gradient(circle at 84% 8%, #eef2ea, #f8f8f5),
+    linear-gradient(120deg, rgba(83, 66, 37, 0.08), rgba(83, 66, 37, 0));
+}
+
+.coffee-hero .btn-primary {
+  margin-top: 1rem;
+  background: #5a4027;
+}
+
+.coffee-hero .btn-primary:hover {
+  box-shadow: 0 8px 20px rgba(90, 64, 39, 0.24);
+}
+
+.quote-block {
+  border-left: 5px solid #cdb08e;
+}
+
+.quote-block blockquote {
+  font-style: italic;
+}

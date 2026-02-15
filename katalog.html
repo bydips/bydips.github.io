@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katalog | bydips</title>
+    <meta
+      name="description"
+      content="Katalog contoh landing page bydips: barber shop dan coffee shop, dengan pendekatan struktur, copy, dan konversi."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/katalog.css" />
+  </head>
+  <body data-page="katalog">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="logo mono">bydips</a>
+        <button class="menu-toggle mono" type="button" aria-label="Buka navigasi" aria-expanded="false">
+          menu
+        </button>
+        <nav class="site-nav" aria-label="Navigasi utama">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a class="active" href="katalog.html">Katalog</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section page-intro katalog-intro">
+        <div class="container">
+          <p class="micro-label mono" data-reveal>Portfolio Preview</p>
+          <h1 data-reveal>Katalog landing page dengan standar struktur bydips.</h1>
+          <p data-reveal>
+            Dua contoh ini menunjukkan bagaimana desain, copy, dan CTA disusun supaya pengunjung cepat paham lalu mengambil tindakan.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container katalog-grid">
+          <article class="katalog-card" data-reveal>
+            <img src="https://picsum.photos/seed/bydips-barber-detail/1280/840" alt="Preview landing page barber shop" />
+            <div>
+              <p class="mono">BARBER SHOP</p>
+              <h2>Fokus booking slot layanan dengan friction minimum.</h2>
+              <p>Flow didesain untuk audience lokal: value offer, paket layanan, testimoni, lalu CTA WhatsApp.</p>
+              <a class="btn btn-primary" href="katalog/barber-shop.html">Buka Detail Halaman</a>
+            </div>
+          </article>
+
+          <article class="katalog-card" data-reveal>
+            <img src="https://picsum.photos/seed/bydips-coffee-detail/1280/840" alt="Preview landing page coffee shop" />
+            <div>
+              <p class="mono">COFFEE SHOP</p>
+              <h2>Brand story yang tetap menutup transaksi.</h2>
+              <p>Narasi produk, social proof, dan CTA pre-order ditata untuk menjaga rasa premium namun tetap ringkas.</p>
+              <a class="btn btn-primary" href="katalog/coffee-shop.html">Buka Detail Halaman</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container guidance" data-reveal>
+          <p class="section-kicker mono">Guidance</p>
+          <h2>Custom layout tiap detail page tetap aman untuk skala.</h2>
+          <ul>
+            <li>Style global ada di <span class="mono">css/style.css</span> untuk konsistensi brand.</li>
+            <li>Halaman katalog pakai <span class="mono">css/katalog.css</span> untuk pola grid showcase.</li>
+            <li>Detail page punya file sendiri: <span class="mono">css/barber-shop.css</span> + <span class="mono">js/barber-shop.js</span>, dan setara untuk coffee shop.</li>
+            <li>Pola ini menjaga fleksibilitas eksperimen tanpa merusak halaman lain.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p><span class="mono">bydips</span> | Structured showcase library.</p>
+        <p class="mono">(c) <span id="currentYear"></span> All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/katalog.js"></script>
+  </body>
+</html>

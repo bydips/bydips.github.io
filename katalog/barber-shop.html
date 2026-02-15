@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barber Shop Landing Page | bydips</title>
+    <meta
+      name="description"
+      content="Detail studi landing page barber shop oleh bydips: struktur konten, CTA, dan pendekatan konversi lokal."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/barber-shop.css" />
+  </head>
+  <body data-page="barber-detail">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="../index.html" class="logo mono">bydips</a>
+        <button class="menu-toggle mono" type="button" aria-label="Buka navigasi" aria-expanded="false">
+          menu
+        </button>
+        <nav class="site-nav" aria-label="Navigasi utama">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a class="active" href="../katalog.html">Katalog</a>
+          <a href="../contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section detail-hero barber-hero">
+        <div class="container split-layout">
+          <div>
+            <p class="micro-label mono" data-reveal>Case Detail / Barber Shop</p>
+            <h1 data-reveal>Landing page yang mengubah visitor lokal jadi booking masuk.</h1>
+            <p data-reveal>
+              Tantangan utama: informasi layanan tercecer dan CTA tidak jelas. Solusi: menyatukan pesan layanan,
+              promo, dan jadwal booking ke satu alur yang tegas.
+            </p>
+            <a class="btn btn-primary" href="../contact.html" data-reveal>Request Struktur Serupa</a>
+          </div>
+          <figure class="detail-cover" data-reveal>
+            <img src="https://picsum.photos/seed/bydips-barber-full/1280/960" alt="Visual landing page barber shop" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container metric-row">
+          <article data-reveal>
+            <p class="mono">Target</p>
+            <h2>Booking lebih cepat</h2>
+            <p>Mengarahkan pengunjung ke WhatsApp booking dalam kurang dari 3 scroll.</p>
+          </article>
+          <article data-reveal>
+            <p class="mono">Structure</p>
+            <h2>Offer-first layout</h2>
+            <p>Urutan konten: Hero, paket, testimoni, lokasi, CTA sticky.</p>
+          </article>
+          <article data-reveal>
+            <p class="mono">Conversion</p>
+            <h2>CTA kontekstual</h2>
+            <p>Tiap section ditutup aksi relevan agar tidak ada dead-end interaction.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <p class="section-kicker mono" data-reveal>Implementation Note</p>
+          <h2 data-reveal>Halaman ini pakai style dan interaction spesifik tanpa mengganggu sistem utama.</h2>
+          <p data-reveal>
+            Override visual dibuat di <span class="mono">css/barber-shop.css</span>. Interaction tambahan ada di
+            <span class="mono">js/barber-shop.js</span>. Pattern ini aman untuk scaling katalog dengan layout unik.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p><span class="mono">bydips</span> | Detail showcase.</p>
+        <p class="mono">(c) <span id="currentYear"></span> All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/barber-shop.js"></script>
+  </body>
+</html>

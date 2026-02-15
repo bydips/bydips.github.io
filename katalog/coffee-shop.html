@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop Landing Page | bydips</title>
+    <meta
+      name="description"
+      content="Detail studi landing page coffee shop oleh bydips: storytelling brand yang tetap fokus ke conversion."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/coffee-shop.css" />
+  </head>
+  <body data-page="coffee-detail">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="../index.html" class="logo mono">bydips</a>
+        <button class="menu-toggle mono" type="button" aria-label="Buka navigasi" aria-expanded="false">
+          menu
+        </button>
+        <nav class="site-nav" aria-label="Navigasi utama">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a class="active" href="../katalog.html">Katalog</a>
+          <a href="../contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section detail-hero coffee-hero">
+        <div class="container split-layout">
+          <div>
+            <p class="micro-label mono" data-reveal>Case Detail / Coffee Shop</p>
+            <h1 data-reveal>Brand story yang tetap disiplin menutup pre-order.</h1>
+            <p data-reveal>
+              Tantangan utama: halaman terlalu artistik, tapi alur beli tidak tegas. Solusi: merapikan storytelling
+              agar tetap berakhir ke aksi pre-order yang natural.
+            </p>
+            <a class="btn btn-primary" href="../contact.html" data-reveal>Terapkan di Brand Saya</a>
+          </div>
+          <figure class="detail-cover" data-reveal>
+            <img src="https://picsum.photos/seed/bydips-coffee-full/1280/960" alt="Visual landing page coffee shop" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container metric-row">
+          <article data-reveal>
+            <p class="mono">Target</p>
+            <h2>Pre-order naik</h2>
+            <p>Menjaga emosi brand sambil memperjelas produk prioritas dan cara pesan.</p>
+          </article>
+          <article data-reveal>
+            <p class="mono">Structure</p>
+            <h2>Story to action flow</h2>
+            <p>Urutan konten: origin story, signature menu, UGC quote, CTA pre-order.</p>
+          </article>
+          <article data-reveal>
+            <p class="mono">Conversion</p>
+            <h2>Evidence-led copy</h2>
+            <p>Social proof diposisikan tepat sebelum CTA untuk mengurangi ragu beli.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container quote-block" data-reveal>
+          <p class="mono">Client Direction</p>
+          <blockquote>
+            "Kami ingin tetap punya rasa brand yang kuat, tapi pengunjung juga langsung tahu harus klik ke mana."
+          </blockquote>
+          <p>
+            Visual dan motion spesifik ada di <span class="mono">css/coffee-shop.css</span> dan
+            <span class="mono">js/coffee-shop.js</span>, sementara komponen dasar tetap dari style global.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p><span class="mono">bydips</span> | Detail showcase.</p>
+        <p class="mono">(c) <span id="currentYear"></span> All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/coffee-shop.js"></script>
+  </body>
+</html>

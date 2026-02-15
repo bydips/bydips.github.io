@@ -1,0 +1,25 @@
+.barber-hero {
+  background:
+    radial-gradient(circle at 20% 20%, #f4f8f1, #f9faf8),
+    linear-gradient(120deg, rgba(29, 77, 54, 0.05), rgba(29, 77, 54, 0));
+}
+
+.barber-hero .btn-primary {
+  margin-top: 1rem;
+}
+
+.metric-row article {
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-row article::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #1d4d36, #99bba8);
+  opacity: 0.5;
+}
