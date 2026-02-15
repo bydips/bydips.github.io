@@ -586,9 +586,7 @@ body[data-page="home"] .simple-footer {
 .contact-section {
   width: min(560px, 100%);
   margin: 0 auto;
-  border: 1px solid var(--line);
   border-radius: 18px;
-  background: #fff;
   padding: 1.2rem;
 }
 
@@ -624,7 +622,7 @@ body[data-page="home"] .simple-footer {
   border: 1px solid #d8d4ca;
   font: inherit;
   color: #1f1f1f;
-  background: #fcfbf8;
+  background: #ffffff;
 }
 
 .contact-field textarea {
