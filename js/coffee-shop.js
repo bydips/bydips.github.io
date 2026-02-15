@@ -1,5 +1,5 @@
 /**
- * bydips — Coffee shop landing.
+ * bydips - Coffee shop landing.
  * CTA scroll to menu.
  */
 

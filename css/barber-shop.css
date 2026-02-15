@@ -1,4 +1,23 @@
-/* bydips — Barber shop landing. Dark, masculine, sharp. */
+/* Standalone Barber Shop detail page (isolated from main site styles). */
+
+:root {
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+  --space-8: 64px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 
 .barber-page {
   --barber-bg: #0d0d0d;
@@ -7,13 +26,13 @@
   --barber-muted: #8c8c8c;
   --barber-accent: #c9a962;
   --barber-border: #2a2a2a;
-  font-family: var(--font-sans);
+  font-family: "DM Sans", "Segoe UI", sans-serif;
   background: var(--barber-bg);
   color: var(--barber-text);
   min-height: 100vh;
 }
 
-.barber-page .barber-header {
+.barber-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,22 +40,24 @@
   border-bottom: 1px solid var(--barber-border);
 }
 
-.barber-page .barber-logo {
-  font-family: var(--font-mono);
+.barber-logo {
+  font-family: "JetBrains Mono", monospace;
   font-weight: 500;
   font-size: 1rem;
   letter-spacing: 0.1em;
   color: var(--barber-accent);
+  text-decoration: none;
 }
 
-.barber-page .barber-nav a {
+.barber-nav a {
   color: var(--barber-muted);
   font-size: 0.875rem;
   margin-left: var(--space-4);
-  transition: color 0.2s;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.barber-page .barber-nav a:hover {
+.barber-nav a:hover {
   color: var(--barber-text);
 }
 
@@ -47,13 +68,13 @@
   margin: 0 auto;
 }
 
-.barber-hero .barber-micro {
-  font-family: var(--font-mono);
+.barber-micro {
+  font-family: "JetBrains Mono", monospace;
   font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--barber-accent);
-  margin-bottom: var(--space-2);
+  margin: 0 0 var(--space-2);
 }
 
 .barber-hero h1 {
@@ -71,7 +92,7 @@
   line-height: 1.6;
 }
 
-.barber-hero .barber-cta {
+.barber-cta {
   display: inline-block;
   padding: var(--space-2) var(--space-4);
   background: var(--barber-accent);
@@ -79,10 +100,11 @@
   font-weight: 600;
   font-size: 0.9375rem;
   border-radius: 4px;
-  transition: background 0.2s, transform 0.15s;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
 }
 
-.barber-hero .barber-cta:hover {
+.barber-cta:hover {
   background: #d4b872;
   transform: translateY(-1px);
 }
@@ -121,10 +143,17 @@
   margin: 0 0 var(--space-1);
 }
 
-.barber-service p {
+.barber-service p,
+.barber-note {
   font-size: 0.8125rem;
   color: var(--barber-muted);
   margin: 0;
+  text-align: center;
+}
+
+.barber-note a,
+.barber-footer a {
+  color: var(--barber-accent);
 }
 
 .barber-footer {
@@ -135,6 +164,16 @@
   border-top: 1px solid var(--barber-border);
 }
 
-.barber-footer a {
-  color: var(--barber-accent);
+@media (max-width: 760px) {
+  :root {
+    --space-3: 16px;
+    --space-4: 20px;
+    --space-6: 32px;
+    --space-8: 40px;
+  }
+
+  .barber-nav a {
+    margin-left: var(--space-2);
+    font-size: 0.82rem;
+  }
 }

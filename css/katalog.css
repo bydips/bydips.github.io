@@ -1,51 +1,52 @@
-/* bydips — Katalog gallery. Grid, cards, badges. */
+/* Katalog main section adapted from reference file. Topbar and footer stay global. */
 
 .katalog-intro {
-  padding-bottom: var(--space-4);
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.katalog-head {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  padding: 1.2rem;
+}
+
+.katalog-head h1 {
+  margin-top: 0.45rem;
+  margin-bottom: 0.45rem;
 }
 
 .katalog-gallery {
-  padding: 0 var(--space-4) var(--space-12);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  padding: 1rem;
 }
 
 .katalog-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-4);
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-@media (max-width: 1024px) {
-  .katalog-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .katalog-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-3);
-  }
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.95rem;
 }
 
 .katalog-card {
   display: block;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border: 1px solid #dfdcd4;
+  border-radius: 12px;
   overflow: hidden;
-  transition: border-color 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .katalog-card--live:hover {
-  border-color: var(--color-text);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: #131313;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.09);
   transform: translateY(-2px);
 }
 
 .katalog-card--placeholder {
-  cursor: default;
   opacity: 0.92;
 }
 
@@ -53,14 +54,14 @@
   position: relative;
   aspect-ratio: 3 / 2;
   overflow: hidden;
-  background: var(--color-border);
+  background: #e5e2da;
 }
 
 .katalog-card__thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.35s var(--ease-out);
+  transition: transform 0.35s ease;
 }
 
 .katalog-card--live:hover .katalog-card__thumb img {
@@ -69,41 +70,60 @@
 
 .katalog-card__badge {
   position: absolute;
-  top: var(--space-2);
-  right: var(--space-2);
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  padding: var(--space-1) var(--space-2);
-  background: var(--color-text);
-  color: var(--color-surface);
+  top: 0.55rem;
+  right: 0.55rem;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  padding: 0.24rem 0.5rem;
   border-radius: 4px;
+  background: #121212;
+  color: #fff;
 }
 
 .katalog-card__badge--soon {
-  background: var(--color-text-muted);
+  background: #6e6e6e;
 }
 
 .katalog-card__meta {
-  padding: var(--space-3);
+  padding: 0.8rem;
 }
 
 .katalog-card__meta .mono {
   display: block;
-  font-size: 0.6875rem;
-  color: var(--color-text-muted);
-  margin-bottom: var(--space-1);
+  font-size: 0.67rem;
+  color: #767676;
+  margin-bottom: 0.24rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .katalog-card__meta h3 {
+  margin: 0 0 0.22rem;
   font-size: 1rem;
-  font-weight: 600;
-  margin: 0 0 var(--space-1);
+  color: #191919;
 }
 
 .katalog-card__meta p {
-  font-size: 0.8125rem;
-  color: var(--color-text-muted);
   margin: 0;
+  font-size: 0.84rem;
   line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+  .katalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .katalog-gallery,
+  .katalog-head {
+    padding: 0.8rem;
+  }
+
+  .katalog-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
 }

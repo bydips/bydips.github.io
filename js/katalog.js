@@ -1,8 +1,3 @@
-/**
- * bydips — Katalog gallery.
- * Card hover, optional keyboard nav, lazy images.
- */
-
 (function () {
   'use strict';
 
@@ -21,8 +16,10 @@
 
   grid.addEventListener('keydown', function (e) {
     if (e.target === grid || !grid.contains(e.target)) return;
+
     var card = Array.prototype.indexOf.call(cards, e.target);
     if (card === -1) return;
+
     current = card;
     if (e.key === 'ArrowLeft') {
       e.preventDefault();
@@ -33,7 +30,6 @@
     }
   });
 
-  // Placeholder cards: no href, show "Segera" state only
   grid.querySelectorAll('.katalog-card--placeholder').forEach(function (card) {
     card.setAttribute('tabindex', '-1');
   });

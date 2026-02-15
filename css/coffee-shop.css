@@ -1,4 +1,23 @@
-/* bydips — Coffee shop landing. Warm, minimal, inviting. */
+/* Standalone Coffee Shop detail page (isolated from main site styles). */
+
+:root {
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+  --space-8: 64px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 
 .coffee-page {
   --coffee-bg: #f8f6f3;
@@ -7,13 +26,13 @@
   --coffee-muted: #6b6b6b;
   --coffee-accent: #8b6914;
   --coffee-border: #e8e4df;
-  font-family: var(--font-sans);
+  font-family: "DM Sans", "Segoe UI", sans-serif;
   background: var(--coffee-bg);
   color: var(--coffee-text);
   min-height: 100vh;
 }
 
-.coffee-page .coffee-header {
+.coffee-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,22 +41,24 @@
   border-bottom: 1px solid var(--coffee-border);
 }
 
-.coffee-page .coffee-logo {
-  font-family: var(--font-mono);
+.coffee-logo {
+  font-family: "JetBrains Mono", monospace;
   font-weight: 500;
   font-size: 1rem;
   letter-spacing: 0.05em;
   color: var(--coffee-accent);
+  text-decoration: none;
 }
 
-.coffee-page .coffee-nav a {
+.coffee-nav a {
   color: var(--coffee-muted);
   font-size: 0.875rem;
   margin-left: var(--space-4);
-  transition: color 0.2s;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.coffee-page .coffee-nav a:hover {
+.coffee-nav a:hover {
   color: var(--coffee-text);
 }
 
@@ -48,13 +69,13 @@
   margin: 0 auto;
 }
 
-.coffee-hero .coffee-micro {
-  font-family: var(--font-mono);
+.coffee-micro {
+  font-family: "JetBrains Mono", monospace;
   font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--coffee-accent);
-  margin-bottom: var(--space-2);
+  margin: 0 0 var(--space-2);
 }
 
 .coffee-hero h1 {
@@ -72,7 +93,7 @@
   line-height: 1.6;
 }
 
-.coffee-hero .coffee-cta {
+.coffee-cta {
   display: inline-block;
   padding: var(--space-2) var(--space-4);
   background: var(--coffee-text);
@@ -80,10 +101,11 @@
   font-weight: 500;
   font-size: 0.9375rem;
   border-radius: 6px;
-  transition: opacity 0.2s, transform 0.15s;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.15s ease;
 }
 
-.coffee-hero .coffee-cta:hover {
+.coffee-cta:hover {
   opacity: 0.9;
   transform: translateY(-1px);
 }
@@ -135,7 +157,8 @@
   color: var(--coffee-muted);
 }
 
-.coffee-info a {
+.coffee-info a,
+.coffee-footer a {
   color: var(--coffee-accent);
   font-weight: 500;
 }
@@ -148,6 +171,16 @@
   border-top: 1px solid var(--coffee-border);
 }
 
-.coffee-footer a {
-  color: var(--coffee-accent);
+@media (max-width: 760px) {
+  :root {
+    --space-3: 16px;
+    --space-4: 20px;
+    --space-6: 32px;
+    --space-8: 40px;
+  }
+
+  .coffee-nav a {
+    margin-left: var(--space-2);
+    font-size: 0.82rem;
+  }
 }

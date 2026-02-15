@@ -1,4 +1,4 @@
-# Assets — Videos
+# Assets Videos
 
-Tempat untuk video (background, klip) jika diperlukan.  
-Format disarankan: MP4 (H.264) untuk kompatibilitas.
+Folder ini untuk video pendek background atau showcase.
+Gunakan file yang ringkas agar performa tetap baik.

@@ -1,5 +1,5 @@
 /**
- * bydips — Barber shop landing.
+ * bydips - Barber shop landing.
  * CTA scroll, optional booking hook.
  */
 
@@ -16,5 +16,4 @@
       booking.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
-  // If no #booking section, link can be replaced with external URL or form in production
 })();
