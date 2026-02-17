@@ -73,6 +73,7 @@ h3 {
 
 p {
   color: var(--ink-soft);
+  margin-bottom: 12px;
 }
 
 ul,
