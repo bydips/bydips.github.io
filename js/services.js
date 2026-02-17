@@ -12,7 +12,7 @@ if (serviceItems.length) {
         'Landing page promosi'
       ],
       ctaLabel: 'Cakupan Hasil Layanan',
-      ctaText: 'Website Siap Online dengan desain profesional dan pesan yang jelas.',
+      ctaText: 'Website siap online dengan desain profesional dan pesan yang jelas.',
       ctaButton: 'Mulai Proyek Anda',
       image: 'https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1200&q=80'
     },
