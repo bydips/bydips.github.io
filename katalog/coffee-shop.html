@@ -7,7 +7,7 @@
   <title>Coffee Shop - Contoh Landing | bydips</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/coffee-shop.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DQQ2PNPYK"></script>
   <script>
@@ -18,51 +18,236 @@
   </script>
 </head>
 <body class="coffee-page">
-  <header class="coffee-header">
-    <a href="../index.html" class="coffee-logo">BEAN & BREW</a>
-    <nav class="coffee-nav">
-      <a href="#menu">Menu</a>
-      <a href="#info">Info</a>
-      <a href="../katalog.html" class="coffee-back">&larr; Katalog</a>
+  <header class="coffee-header" id="top">
+    <a href="../index.html" class="coffee-logo" aria-label="Beranda bydips">DIPS BEEN</a>
+
+    <nav class="coffee-nav" aria-label="Navigasi utama coffee shop">
+      <a href="#top">Home</a>
+      <a href="#offer">Offer</a>
+      <a href="#info">About Us</a>
+      <a href="#menu">Signature</a>
+      <a href="#contact-info">Info</a>
     </nav>
+
+    <a href="../katalog.html" class="coffee-back" aria-label="Kembali ke katalog">Back to katalog</a>
   </header>
 
-  <section class="coffee-hero">
-    <p class="coffee-micro">Kopi & Suasana</p>
-    <h1>Kopi pilihan. Tempat yang pas buat kerja atau nongkrong.</h1>
-    <p>Lihat menu, jam buka, dan lokasi. Datang atau pesan untuk dibawa.</p>
-    <a href="#menu" class="coffee-cta" id="coffee-cta">Lihat menu</a>
-  </section>
+  <main>
+    <section class="coffee-hero section-reveal" data-reveal>
+      <div class="coffee-hero-copy">
+        <p class="coffee-micro">Freshly Brewed Daily</p>
+        <h1>A Roasted Coffee For You</h1>
+        <p>
+          Kopi terbaik kami diseduh dari biji pilihan dengan teknik roasting presisi.
+          Nikmati pengalaman minum kopi yang hangat, aromatic, dan memorable setiap hari.
+        </p>
+        <a href="#offer" class="coffee-btn" id="coffee-cta">Special Offer</a>
+      </div>
 
-  <section class="coffee-section" id="menu">
-    <h2>Menu andalan</h2>
-    <div class="coffee-menu">
-      <div class="coffee-item">
-        <h3>Espresso</h3>
-        <p>Single / Double</p>
-      </div>
-      <div class="coffee-item">
-        <h3>Latte</h3>
-        <p>Hot / Iced</p>
-      </div>
-      <div class="coffee-item">
-        <h3>Americano</h3>
-        <p>Hot / Iced</p>
-      </div>
-      <div class="coffee-item">
-        <h3>Cold Brew</h3>
-        <p>House blend</p>
-      </div>
-    </div>
-  </section>
+      <div class="coffee-hero-visual" aria-hidden="true">
+        <div class="coffee-cup-wrap">
+          <img
+            src="../assets/images/katalog/coffee/hero-coffee.webp"
+            alt="Secangkir kopi latte"
+            width="1200"
+            height="800"
+            loading="eager"
+          >
+        </div>
 
-  <section class="coffee-info" id="info">
-    <p>
-      <strong>Jam buka:</strong> Setiap hari 07:00-22:00<br>
-      <strong>Lokasi:</strong> Jl. Kopi No. 45, Kota Anda<br>
-      <a href="tel:+6281234567890">+62 812 3456 7890</a>
-    </p>
-  </section>
+      </div>
+    </section>
+
+    <section class="coffee-offer section-reveal" id="offer" data-reveal>
+      <div class="section-head">
+        <h2>Our Delicious Offer</h2>
+        <p>
+          Pilih varian kopi favoritmu, dari yang klasik sampai signature blend yang diracik
+          khusus untuk pelanggan setia kami.
+        </p>
+      </div>
+
+      <div class="offer-grid">
+        <article class="offer-card">
+          <img
+            src="../assets/images/katalog/coffee/offer-hazelnut-latte.webp"
+            alt="Iced Hazelnut Latte"
+            class="offer-drink-image"
+            width="900"
+            height="900"
+            loading="lazy"
+          >
+          <h3>Iced Hazelnut Latte</h3>
+          <p class="offer-pricing"><span class="offer-price-old">35K</span><span class="offer-price-new">28K</span></p>
+        </article>
+
+        <article class="offer-card">
+          <img
+            src="../assets/images/katalog/coffee/offer-croissant.webp"
+            alt="Croissant au Beurre "
+            class="offer-drink-image"
+            width="900"
+            height="900"
+            loading="lazy"
+          >
+          <h3>Croissant au Beurre</h3>
+          <p class="offer-pricing"><span class="offer-price-old">40K</span><span class="offer-price-new">32K</span></p>
+        </article>
+
+        <article class="offer-card">
+          <img
+            src="../assets/images/katalog/coffee/offer-matcha.webp"
+            alt="Iced Matcha Espresso"
+            class="offer-drink-image"
+            width="900"
+            height="900"
+            loading="lazy"
+          >
+          <h3>Iced Matcha Espresso</h3>
+          <p class="offer-pricing"><span class="offer-price-old">38K</span><span class="offer-price-new">30K</span></p>
+        </article>
+
+        <article class="offer-card">
+          <img
+            src="../assets/images/katalog/coffee/offer-cake.webp"
+            alt="Cheese Cake Cherry"
+            class="offer-drink-image"
+            width="900"
+            height="900"
+            loading="lazy"
+          >
+          <h3>Cheese Cake Cherry</h3>
+          <p class="offer-pricing"><span class="offer-price-old">39K</span><span class="offer-price-new">31K</span></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="coffee-exclusive section-reveal" id="info" data-reveal>
+      <div class="exclusive-media">
+        <img
+          src="../assets/images/katalog/coffee/body-coffee.webp"
+          alt="Produk kopi eksklusif"
+          class="exclusive-photo"
+          width="1200"
+          height="800"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="exclusive-content">
+        <h2>☕ Kopi Hangat,<br>Teman Cerita Terbaik</h2>
+        <p>
+          Nikmati racikan kopi pilihan yang disajikan hangat bersama cookies renyah favorit Anda. Perpaduan rasa yang sempurna untuk menemani waktu santai, bekerja, atau berbagi cerita.
+        </p>
+        <div class="exclusive-actions">
+          <a href="#menu" class="coffee-btn coffee-btn--dark">Signature Menu</a>
+          <a href="#gallery" class="coffee-btn coffee-btn--ghost">Vibes</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="coffee-menu-section section-reveal" id="menu" data-reveal>
+      <div class="section-head">
+        <h2>Cita Rasa Signature Kami</h2>
+        <p>
+          Menu favorit pelanggan dengan roast profile beragam, cocok untuk penikmat kopi klasik
+          maupun yang suka rasa creamy.
+        </p>
+      </div>
+
+      <div class="menu-grid">
+        <article class="menu-row" data-reveal-item>
+          <img src="../assets/images/katalog/coffee/signature-menu-1.webp" alt="Americano coffee" width="160" height="160" loading="lazy">
+          <h3>Americano Coffee</h3>
+          <p>25K</p>
+        </article>
+
+        <article class="menu-row" data-reveal-item>
+          <img src="../assets/images/katalog/coffee/signature-menu-2.webp" alt="Japan blend coffee" width="160" height="160" loading="lazy">
+          <h3>Japan's Coffee Greed</h3>
+          <p>22K</p>
+        </article>
+
+        <article class="menu-row" data-reveal-item>
+          <img src="../assets/images/katalog/coffee/signature-menu-3.webp" alt="Virgin coffee" width="160" height="160" loading="lazy">
+          <h3>Virgin Coffee Greed</h3>
+          <p>22K</p>
+        </article>
+
+        <article class="menu-row" data-reveal-item>
+          <img src="../assets/images/katalog/coffee/signature-menu-4.webp" alt="Brazilian roasted coffee" width="160" height="160" loading="lazy">
+          <h3>Brazilian Roasted Coffee</h3>
+          <p>35K</p>
+        </article>
+
+        <article class="menu-row" data-reveal-item>
+          <img src="../assets/images/katalog/coffee/signature-menu-5.webp" alt="Italian roasted coffee" width="160" height="160" loading="lazy">
+          <h3>Italian Roasted Coffee</h3>
+          <p>25K</p>
+        </article>
+
+        <article class="menu-row" data-reveal-item>
+          <img src="../assets/images/katalog/coffee/signature-menu-6.webp" alt="Best latte macchiato" width="160" height="160" loading="lazy">
+          <h3>Best Latte Macchiato</h3>
+          <p>25K</p>
+        </article>
+      </div>
+    </section>
+  
+    <section class="coffee-gallery-section section-reveal" id="gallery" data-reveal>
+      <div class="section-head">
+        <h2>Galeri Suasana Cafe</h2>
+        <p>
+          Intip vibe harian di coffee shop kami, mulai dari sudut kerja nyaman sampai momen santai
+          bareng teman dengan secangkir kopi hangat.
+        </p>
+      </div>
+
+      <div class="coffee-gallery-grid">
+        <figure class="gallery-card gallery-card--featured">
+          <img src="../assets/images/katalog/coffee/vibes-coffee-shop-5.webp" alt="Interior cafe dengan pencahayaan hangat" width="1400" height="1600" loading="lazy">
+        </figure>
+        <figure class="gallery-card">
+          <img src="../assets/images/katalog/coffee/vibes-coffee-shop-1.webp" alt="Area barista dan mesin kopi" width="1000" height="800" loading="lazy">
+        </figure>
+        <figure class="gallery-card">
+          <img src="../assets/images/katalog/coffee/vibes-coffee-shop-2.webp" alt="Pengunjung menikmati kopi di meja kayu" width="1000" height="800" loading="lazy">
+        </figure>
+        <figure class="gallery-card">
+          <img src="../assets/images/katalog/coffee/vibes-coffee-shop-3.webp" alt="Sudut cafe dengan latte art" width="1000" height="800" loading="lazy">
+        </figure>
+        <figure class="gallery-card">
+          <img src="../assets/images/katalog/coffee/vibes-coffee-shop-4.webp" alt="Suasana meja kopi untuk kerja" width="1000" height="800" loading="lazy">
+        </figure>
+      </div>
+    </section>
+  
+    <section class="coffee-contact-section section-reveal" id="contact-info" data-reveal>
+      <div class="section-head">
+        <h2>Info</h2>
+        <p>Semua informasi penting untuk kunjungan, reservasi, atau pemesanan tersedia di bawah ini.</p>
+      </div>
+
+      <div class="coffee-contact-grid">
+        <article class="contact-card">
+          <h3>Alamat</h3>
+          <p>Jl. Braga No. 45, Bandung, Jawa Barat 40111</p>
+        </article>
+
+        <article class="contact-card">
+          <h3>Kontak</h3>
+          <p><a href="https://wa.me/6281234567890">+62 123 456 7890</a></p>
+          <p><a href="mailto:hello@bydips.com">hello@bydips.com</a></p>
+        </article>
+
+        <article class="contact-card">
+          <h3>Jam Buka</h3>
+          <p>Senin-Jumat: 07:00 - 22:00</p>
+          <p>Sabtu-Minggu: 08:00 - 24:00</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
   <footer class="coffee-footer">
     Contoh landing page dari <a href="../index.html">bydips</a> | <a href="../contact.html">Butuh yang serupa?</a>
