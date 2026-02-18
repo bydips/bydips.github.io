@@ -5,7 +5,7 @@ if (serviceItems.length) {
     clarity: {
       tag: 'Website',
       title: 'Pembuatan Website Baru',
-      text: 'Membangun website profesional yang dirancang strategis, fokus pada kejelasan pesan, kemudahan penggunaan, dan konversi agar bisnis Anda terlihat kredibel dan siap bersaing secara digital.',
+      text: 'Membangun website profesional yang dirancang strategis, fokus pada kemudahan penggunaan, dan konversi agar bisnis Anda terlihat kredibel dan siap bersaing secara digital.',
       points: [
         'Website company profile',
         'Website katalog produk',
@@ -17,7 +17,7 @@ if (serviceItems.length) {
       image: 'https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1200&q=80'
     },
     structure: {
-      tag: 'Performa',
+      tag: 'Optimasi',
       title: 'Optimasi Website',
       text: 'Meningkatkan performa website dari sisi struktur, tampilan, kecepatan, hingga alur konversi agar lebih efektif menarik dan mengubah pengunjung menjadi pelanggan.',
       points: ['Audit struktur halaman', 'Perbaikan tampilan & navigasi', 'Optimasi call-to-action'],
@@ -37,7 +37,7 @@ if (serviceItems.length) {
       image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80'
     },
     performance: {
-      tag: 'Desain Visual',
+      tag: 'Marketing',
       title: 'Materi Promosi dan Pemasaran',
       text: 'Merancang materi promosi yang komunikatif dan strategis untuk mendukung aktivitas pemasaran online maupun offline agar pesan bisnis tersampaikan dengan jelas dan menarik.',
       points: ['Brosur digital', 'Poster promosi', 'Materi iklan digital'],
@@ -47,9 +47,9 @@ if (serviceItems.length) {
       image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80'
     },
     analytics: {
-      tag: 'Konsultasi',
+      tag: 'Konsultan',
       title: 'Konsultasi Bisnis Digital',
-      text: 'Sesi strategis untuk membantu bisnis memahami arah pengembangan digital, mulai dari perencanaan website hingga strategi pertumbuhan yang sesuai dengan kebutuhan dan kapasitas usaha.',
+      text: 'Sesi strategis untuk membantu Anda memahami arah pengembangan digital, mulai dari perencanaan website hingga strategi pertumbuhan yang ingin dicapai.',
       points: ['Audit jejak digital', 'Perencanaan roadmap website', 'Strategi peningkatan konversi'],
       ctaLabel: 'Cakupan Hasil Layanan',
       ctaText: 'Roadmap pengembangan digital yang jelas untuk bisnis Anda.',

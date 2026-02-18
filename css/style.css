@@ -58,8 +58,8 @@ p {
 }
 
 h1 {
-  font-size: clamp(1.8rem, 4.8vw, 3.6rem);
-  line-height: 1.03;
+  font-size: clamp(1.6rem, 4.8vw, 3.3rem);
+  line-height: 1.1;
   letter-spacing: -0.04em;
 }
 
@@ -234,9 +234,9 @@ li + li {
 
 .hero-copy {
   position: relative;
-  top: -45px;
+  top: -55px;
   z-index: 2;
-  max-width: min(900px, 65%);
+  max-width: min(850px, 65%);
   padding: clamp(0.8rem, 2vw, 1.5rem);
 }
 
@@ -413,11 +413,11 @@ body[data-page="home"] .simple-footer {
 
 .service-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  align-items: start;
   gap: 0.9rem;
 }
 
-.service-list,
 .service-detail,
 .service-cta-card,
 .thumb-card,
@@ -427,19 +427,15 @@ body[data-page="home"] .simple-footer {
   background: #fff;
 }
 
-.service-list {
-  display: grid;
-  gap: 0.4rem;
-  padding: 0.65rem;
-  align-content: start;
-}
-
 .service-item {
+  width: auto;
+  flex: 0 1 auto;
+  margin: 0;
   border: 1px solid var(--line);
   border-radius: 10px;
   padding: 0.63rem 0.68rem;
   background: #fcfcfb;
-  text-align: left;
+  text-align: center;
   color: #3c3c3c;
   font: inherit;
   font-size: 0.92rem;
@@ -455,6 +451,22 @@ body[data-page="home"] .simple-footer {
 
 .service-detail {
   padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  row-gap: 0.55rem;
+  column-gap: 0.45rem;
+}
+
+.service-detail-content {
+  flex: 1 0 100%;
+  margin-top: 0;
+  border: 0px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  padding: 0rem;
 }
 
 .detail-kicker {
@@ -765,6 +777,10 @@ body[data-page="home"] .simple-footer {
     grid-template-columns: 1fr;
   }
 
+  .service-cta-card img {
+    height: 240px;
+  }
+
   .thumb-grid,
   .katalog-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -855,6 +871,20 @@ body[data-page="home"] .simple-footer {
 
   .hero-copy {
     max-width: 100%;
+  }
+
+  .service-detail {
+    padding: 0.8rem;
+    row-gap: 0.55rem;
+    column-gap: 0.45rem;
+  }
+
+  .service-detail-content {
+    padding: 0.82rem;
+  }
+
+  .service-cta-card img {
+    height: 210px;
   }
 
   .home-sheet {
