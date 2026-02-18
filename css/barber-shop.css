@@ -36,8 +36,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-3) var(--space-4);
-  border-bottom: 1px solid var(--barber-border);
+  padding: 12px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(13, 13, 13, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(980px, calc(100% - (var(--space-4) * 2)));
+  z-index: 20;
 }
 
 .barber-logo {
@@ -50,9 +60,9 @@ body {
 }
 
 .barber-nav a {
-  color: var(--barber-muted);
+  color: rgba(245, 245, 245, 0.82);
   font-size: 0.875rem;
-  margin-left: var(--space-4);
+  margin-left: var(--space-3);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -62,10 +72,28 @@ body {
 }
 
 .barber-hero {
-  padding: var(--space-8) var(--space-4);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: clamp(520px, 70vh, 740px);
+  padding: var(--space-4) var(--space-4) var(--space-8);
+}
+
+.barber-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(110deg, rgba(12, 12, 12, 0.8) 20%, rgba(12, 12, 12, 0.56) 55%, rgba(12, 12, 12, 0.76) 100%),
+    url("../assets/images/katalog/barber/hero-barber.webp");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.barber-hero-content {
+  max-width: 680px;
+  margin: clamp(92px, 12vh, 120px) auto 0;
   text-align: center;
-  max-width: 640px;
-  margin: 0 auto;
 }
 
 .barber-micro {
@@ -87,7 +115,7 @@ body {
 
 .barber-hero p {
   font-size: 1.0625rem;
-  color: var(--barber-muted);
+  color: rgba(245, 245, 245, 0.74);
   margin: 0 0 var(--space-4);
   line-height: 1.6;
 }
@@ -151,6 +179,14 @@ body {
   text-align: center;
 }
 
+.barber-price {
+  display: inline-block;
+  margin-top: var(--space-2);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.86rem;
+  color: var(--barber-accent);
+}
+
 .barber-note a,
 .barber-footer a {
   color: var(--barber-accent);
@@ -172,8 +208,24 @@ body {
     --space-8: 40px;
   }
 
+  .barber-header {
+    width: calc(100% - (var(--space-4) * 2));
+    padding: 10px 14px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .barber-nav a {
-    margin-left: var(--space-2);
-    font-size: 0.82rem;
+    margin-left: 12px;
+    font-size: 0.78rem;
+  }
+
+  .barber-hero {
+    min-height: 470px;
+  }
+
+  .barber-hero-content {
+    margin-top: clamp(84px, 14vh, 104px);
   }
 }
