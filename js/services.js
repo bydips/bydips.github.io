@@ -7,54 +7,56 @@ if (serviceItems.length) {
       title: 'Pembuatan Website Baru',
       text: 'Membangun website profesional yang dirancang strategis, fokus pada kemudahan penggunaan, dan konversi agar bisnis Anda terlihat kredibel dan siap bersaing secara digital.',
       points: [
+        'Website UMKM dengan fitur WhatsApp',
         'Website company profile',
         'Website katalog produk',
-        'Landing page promosi'
+        'Website event atau seminar',
+        'Website personal branding'
       ],
       ctaLabel: 'Cakupan Hasil Layanan',
-      ctaText: 'Website siap online dengan desain profesional dan pesan yang jelas.',
+      ctaText: 'Website siap online dengan desain profesional dan mudah digunakan.',
       ctaButton: 'Mulai Proyek Anda',
-      image: 'https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1200&q=80'
+      image: 'assets/images/layanan/layanan-pembuatan-website.webp'
     },
     structure: {
       tag: 'Optimasi',
       title: 'Optimasi Website',
       text: 'Meningkatkan performa website dari sisi struktur, tampilan, kecepatan, hingga alur konversi agar lebih efektif menarik dan mengubah pengunjung menjadi pelanggan.',
-      points: ['Audit struktur halaman', 'Perbaikan tampilan & navigasi', 'Optimasi call-to-action'],
+      points: ['Audit struktur halaman', 'Perbaikan tampilan & navigasi', 'Optimasi SEO halaman', 'Revisi struktur homepage', 'Riset kata kunci potensial'],
       ctaLabel: 'Cakupan Hasil Layanan',
       ctaText: 'Rekomendasi perbaikan untuk meningkatkan performa website.',
       ctaButton: 'Optimalkan Sekarang',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80'
+      image: 'assets/images/layanan/layanan-optimasi-seo.webp'
     },
     conversion: {
       tag: 'Desain Visual',
       title: 'Desain Visual Media Sosial',
       text: 'Membuat desain visual yang konsisten dan profesional untuk memperkuat identitas brand serta meningkatkan daya tarik konten di berbagai platform digital.',
-      points: ['Desain feed Instagram', 'Desain konten promosi', 'Banner campaign'],
+      points: ['Desain feed Instagram', 'Desain konten promosi', 'Banner campaign', 'Template konten siap pakai', 'Desain visual untuk katalog produk'],
       ctaLabel: 'Cakupan Hasil Layanan',
       ctaText: 'Template konten siap pakai untuk memperkuat brand Anda.',
       ctaButton: 'Tingkatkan Visual Brand',
-      image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80'
+      image: 'assets/images/layanan/layanan-desain-media-sosial.webp'
     },
     performance: {
       tag: 'Marketing',
       title: 'Materi Promosi dan Pemasaran',
       text: 'Merancang materi promosi yang komunikatif dan strategis untuk mendukung aktivitas pemasaran online maupun offline agar pesan bisnis tersampaikan dengan jelas dan menarik.',
-      points: ['Brosur digital', 'Poster promosi', 'Materi iklan digital'],
+      points: ['Brosur digital', 'Poster promosi', 'Materi iklan digital', 'Flyer promosi', 'Desain katalog produk'],
       ctaLabel: 'Cakupan Hasil Layanan',
-      ctaText: 'Materi iklan digital siap pakai untuk kampanye promosi.',
+      ctaText: 'Aset materi iklan digital siap pakai untuk kampanye promosi.',
       ctaButton: 'Buat Materi Promosi',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80'
+      image: 'assets/images/layanan/layanan-sosial-media-marketing.webp'
     },
     analytics: {
-      tag: 'Konsultan',
+      tag: 'Konsultansi',
       title: 'Konsultasi Bisnis Digital',
       text: 'Sesi strategis untuk membantu Anda memahami arah pengembangan digital, mulai dari perencanaan website hingga strategi pertumbuhan yang ingin dicapai.',
-      points: ['Audit jejak digital', 'Perencanaan roadmap website', 'Strategi peningkatan konversi'],
+      points: ['Audit jejak digital', 'Perencanaan blueprint website', 'Strategi roadmap digital', 'Perencanaan struktur konten', 'Rencana pengembangan fitur website'],
       ctaLabel: 'Cakupan Hasil Layanan',
       ctaText: 'Roadmap pengembangan digital yang jelas untuk bisnis Anda.',
       ctaButton: 'Jadwalkan Konsultasi',
-      image: 'https://images.unsplash.com/photo-1527689368864-3a821dbccc34?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=1200&q=80'
+      image: 'assets/images/layanan/layanan-konsultan-digital.webp'
     }
   };
 
