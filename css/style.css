@@ -709,15 +709,39 @@ body[data-page="home"] .simple-footer {
 .founder-note {
   display: grid;
   grid-template-columns: minmax(0, 0.88fr) minmax(0, 1fr);
+  align-items: start;
   gap: 1rem;
 }
 
-.founder-note img {
+.founder-note > * {
+  min-width: 0;
+}
+
+.founder-note-media {
+  margin: 0;
+}
+
+.founder-note-media img {
   width: 100%;
   height: 100%;
   min-height: 260px;
   border-radius: 14px;
   object-fit: cover;
+}
+
+.founder-note-content {
+  min-width: 0;
+}
+
+/* Safari fallback to stabilize image sizing inside CSS Grid */
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+  .founder-note-media img {
+    display: block;
+    height: auto;
+    min-height: 260px;
+    aspect-ratio: 5 / 6;
+    object-fit: cover;
+  }
 }
 
 .founder-note h2 {
@@ -749,6 +773,12 @@ body[data-page="home"] .simple-footer {
   .inner-grid,
   .founder-note {
     grid-template-columns: 1fr;
+  }
+
+  .founder-note-media img {
+    aspect-ratio: 16 / 10;
+    min-height: 220px;
+    height: auto;
   }
 
   .hero-overlay {
@@ -843,5 +873,14 @@ body[data-page="home"] .simple-footer {
   .board-head {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .founder-note .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .founder-note .hero-cta .btn {
+    width: 100%;
   }
 }
