@@ -720,8 +720,8 @@ body[data-page="home"] .simple-footer {
 
 .founder-note {
   display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1fr);
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: stretch;
   gap: 1rem;
 }
 
@@ -731,13 +731,15 @@ body[data-page="home"] .simple-footer {
 
 .founder-note-media {
   margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  height: 100%;
+  min-height: 0;
 }
 
 .founder-note-media img {
   width: 100%;
   height: 100%;
-  min-height: 260px;
-  border-radius: 14px;
   object-fit: cover;
 }
 
@@ -749,9 +751,8 @@ body[data-page="home"] .simple-footer {
 @supports (font: -apple-system-body) and (-webkit-appearance: none) {
   .founder-note-media img {
     display: block;
-    height: auto;
-    min-height: 260px;
-    aspect-ratio: 5 / 6;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 }
@@ -792,9 +793,12 @@ body[data-page="home"] .simple-footer {
   }
 
   .founder-note-media img {
+    height: 100%;
+  }
+
+  .founder-note-media {
     aspect-ratio: 16 / 10;
     min-height: 220px;
-    height: auto;
   }
 
   .hero-overlay {
@@ -912,5 +916,10 @@ body[data-page="home"] .simple-footer {
 
   .founder-note .hero-cta .btn {
     width: 100%;
+  }
+
+  .founder-note-media {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
   }
 }
