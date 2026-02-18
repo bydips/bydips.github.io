@@ -234,7 +234,7 @@ li + li {
 
 .hero-copy {
   position: relative;
-  top: -60px;
+  top: -45px;
   z-index: 2;
   max-width: min(900px, 65%);
   padding: clamp(0.8rem, 2vw, 1.5rem);
