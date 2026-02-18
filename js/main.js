@@ -19,6 +19,34 @@ if (revealNodes.length) {
   revealNodes.forEach((node) => revealObserver.observe(node));
 }
 
+const topbars = document.querySelectorAll('.topbar');
+if (topbars.length) {
+  const threshold = 12;
+  let ticking = false;
+
+  const updateTopbarState = () => {
+    const scrolled = window.scrollY > threshold;
+    topbars.forEach((bar) => {
+      bar.classList.toggle('is-scrolled', scrolled);
+    });
+    ticking = false;
+  };
+
+  updateTopbarState();
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(updateTopbarState);
+    },
+    { passive: true }
+  );
+
+  window.addEventListener('resize', updateTopbarState);
+}
+
 const menuToggles = document.querySelectorAll('.menu-toggle');
 menuToggles.forEach((button) => {
   const bar = button.closest('.topbar');
