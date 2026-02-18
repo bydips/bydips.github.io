@@ -42,18 +42,59 @@ menuToggles.forEach((button) => {
 
 const contactForm = document.querySelector('#contact-form');
 if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
+  const button = contactForm.querySelector('button[type="submit"]');
+  const statusNode = contactForm.querySelector('#form-status');
+  const defaultButtonLabel = button ? button.textContent : 'Kirim';
+
+  const setStatus = (message, state) => {
+    if (!statusNode) return;
+    statusNode.textContent = message;
+    statusNode.classList.remove('is-info', 'is-success', 'is-error');
+    if (state) statusNode.classList.add(state);
+  };
+
+  contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const button = contactForm.querySelector('button[type=\"submit\"]');
     if (!button) return;
+
+    const formData = new FormData(contactForm);
+    const botcheckValue = String(formData.get('botcheck') || '').trim();
+    if (botcheckValue) {
+      setStatus('Pengiriman gagal. Coba lagi.', 'is-error');
+      return;
+    }
 
     button.disabled = true;
     button.textContent = 'Mengirim...';
+    setStatus('Sedang mengirim pesan Anda...', 'is-info');
 
-    window.setTimeout(() => {
-      button.textContent = 'Terima kasih - kami akan menghubungi Anda.';
-    }, 800);
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      let payload = {};
+      try {
+        payload = await response.json();
+      } catch (parseError) {
+        payload = {};
+      }
+
+      const isSuccess = response.ok && payload.success !== false;
+      if (!isSuccess) {
+        throw new Error(payload.message || 'Pengiriman gagal');
+      }
+
+      setStatus('Pesan berhasil terkirim. Terima kasih, kami akan segera menghubungi Anda.', 'is-success');
+      contactForm.reset();
+    } catch (error) {
+      setStatus('Pesan belum terkirim. Silakan coba lagi dalam beberapa saat.', 'is-error');
+    } finally {
+      button.disabled = false;
+      button.textContent = defaultButtonLabel;
+    }
   });
 }
 

@@ -6,7 +6,7 @@
     <title>Contact | bydips</title>
     <meta
       name="description"
-      content="Hubungi bydips untuk menyusun fondasi digital presence yang jelas, terukur, dan siap mendorong conversion bisnis."
+      content="Hubungi Rohmat Dipo Darmawan untuk konsultasi gratis pembuatan website dan temukan solusi digital yang tepat untuk UMKM Anda."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,16 +49,26 @@
           </div>
 
           <form class="contact-form-simple" id="contact-form" action="#" method="post">
+            <input type="hidden" name="access_key" value="b49e28ef-b6ed-4009-aa1a-8effb741a8a3" />
+            <input type="hidden" name="from_name" value="bydips Contact Form" />
+            <div class="visually-hidden" aria-hidden="true">
+              <label for="botcheck">Jangan isi field ini</label>
+              <input type="text" id="botcheck" name="botcheck" tabindex="-1" autocomplete="off" />
+            </div>
             <div class="contact-field">
-              <label for="name">Nama / Brand</label>
+              <label for="name">Nama / Brand *</label>
               <input type="text" id="name" name="name" required placeholder="Nama Anda atau nama brand" />
             </div>
             <div class="contact-field">
-              <label for="email">Email</label>
+              <label for="email">Email *</label>
               <input type="email" id="email" name="email" required placeholder="email@contoh.com" />
             </div>
             <div class="contact-field">
-              <label for="message">Pesan</label>
+              <label for="whatsapp">Nomor WhatsApp (opsional)</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="08xx-xxxx-xxxx" />
+            </div>
+            <div class="contact-field">
+              <label for="message">Pesan *</label>
               <textarea
                 id="message"
                 name="message"
@@ -69,6 +79,7 @@
             <div class="contact-actions">
               <button type="submit" class="btn btn-dark">Kirim</button>
             </div>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
           </form>
 
           <p class="contact-note-simple">
