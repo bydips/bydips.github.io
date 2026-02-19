@@ -146,8 +146,22 @@ li + li {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
   letter-spacing: 0.09em;
   font-size: 0.86rem;
+  line-height: 1;
+}
+
+.brand img {
+  display: block;
+  width: auto;
+  height: 30px;
+  filter: none;
+}
+
+.topbar-light .brand img {
+  filter: brightness(0) saturate(100%);
 }
 
 .menu {
@@ -599,6 +613,29 @@ body[data-page="home"] .simple-footer {
   margin-top: 0.8rem;
 }
 
+.about-intro-split {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-intro-logo {
+  margin: 0;
+}
+
+.about-intro-logo img {
+
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.about-intro-split p {
+  margin: 0;
+}
+
 .inner-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -792,6 +829,10 @@ body[data-page="home"] .simple-footer {
     grid-template-columns: 1fr;
   }
 
+  .about-intro-split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+  }
+
   .founder-note-media img {
     height: 100%;
   }
@@ -829,6 +870,10 @@ body[data-page="home"] .simple-footer {
 
   .topbar {
     width: calc(100% - 1rem);
+  }
+
+  .brand img {
+    height: 26px;
   }
 
   .inner-shell {
@@ -889,6 +934,15 @@ body[data-page="home"] .simple-footer {
 
   .service-cta-card img {
     height: 210px;
+  }
+
+  .about-intro-split {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .about-intro-logo img {
+    width: min(130px, 55vw);
   }
 
   .home-sheet {
