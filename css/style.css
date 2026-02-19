@@ -414,7 +414,7 @@ body[data-page="home"] .simple-footer {
 .service-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-  align-items: start;
+  align-items: stretch;
   gap: 0.9rem;
 }
 
