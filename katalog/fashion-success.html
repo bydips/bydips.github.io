@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Checkout berhasil fashion online - katalog bydips.">
+  <title>Fashion Checkout Success | bydips</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/general/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/fashion-shop.css">
+</head>
+<body class="fashion-page" data-page="success">
+  <header class="fashion-header fashion-header--inner">
+    <a class="fashion-logo" href="fashion-shop.html">LE DIPS</a>
+
+    <nav class="fashion-nav" aria-label="Navigasi ringkasan pembayaran">
+      <a href="fashion-shop.html">Shop</a>
+      <a href="fashion-cart.html">Cart</a>
+      <a href="fashion-checkout.html">Checkout</a>
+      <a href="../katalog.html">Katalog</a>
+    </nav>
+
+    <a class="fashion-cart-link" href="fashion-cart.html" aria-label="Buka keranjang">
+      Cart
+      <span class="fashion-cart-count" data-cart-count>0</span>
+    </a>
+  </header>
+
+  <main class="fashion-success-layout" id="fashion-success-page">
+    <section class="success-panel" id="success-content">
+      <h1>Checkout Berhasil</h1>
+      <p class="success-subtitle">Pesananmu sudah dibuat. Silakan lakukan pembayaran sesuai instruksi berikut.</p>
+
+      <div class="success-order-meta">
+        <p>Order ID: <strong id="success-order-id">-</strong></p>
+        <button class="text-btn" type="button" data-copy-text="" id="copy-order-id">Salin Order ID</button>
+      </div>
+
+      <p class="payment-deadline">
+        Batas pembayaran: <strong id="success-deadline">-</strong>
+      </p>
+
+      <section class="payment-info" id="success-payment-info" aria-labelledby="payment-info-title">
+        <h2 id="payment-info-title">Informasi Pembayaran</h2>
+        <div id="payment-info-body"></div>
+      </section>
+
+      <section class="success-items" aria-labelledby="success-items-title">
+        <h2 id="success-items-title">Ringkasan Belanja</h2>
+        <div id="success-items-list"></div>
+      </section>
+
+      <dl class="summary-list summary-list--compact">
+        <div>
+          <dt>Subtotal</dt>
+          <dd id="success-subtotal">Rp0</dd>
+        </div>
+        <div>
+          <dt>Ongkir</dt>
+          <dd id="success-shipping">Rp0</dd>
+        </div>
+        <div>
+          <dt>Biaya Layanan</dt>
+          <dd id="success-service">Rp0</dd>
+        </div>
+        <div>
+          <dt>Kode Unik</dt>
+          <dd id="success-unique">Rp0</dd>
+        </div>
+        <div class="is-total">
+          <dt>Total Bayar</dt>
+          <dd id="success-total">Rp0</dd>
+        </div>
+      </dl>
+
+      <p class="payment-status" id="payment-status" role="status" aria-live="polite">Status: Menunggu Pembayaran</p>
+      
+
+      <div class="success-actions">
+        <p>Silakan tekan tombol di bawah ini jika sudah melakukan pembayaran.</p>
+        <button class="fashion-btn" id="paid-confirm-btn">Saya Sudah Bayar</button>
+      </div>
+    </section>
+
+    <template id="fashion-success-empty-template">
+      <section class="empty-state empty-state--wide">
+        <h2>Data pesanan tidak ditemukan</h2>
+        <p>Silakan lakukan checkout terlebih dahulu untuk melihat ringkasan pembayaran.</p>
+        <a class="fashion-btn" href="fashion-shop.html">Kembali ke Shop</a>
+      </section>
+    </template>
+  </main>
+
+  <script src="../js/fashion-shop.js"></script>
+</body>
+</html>

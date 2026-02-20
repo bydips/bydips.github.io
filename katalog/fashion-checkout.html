@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Checkout fashion online - katalog bydips.">
+  <title>Fashion Checkout | bydips</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/general/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/fashion-shop.css">
+</head>
+<body class="fashion-page" data-page="checkout">
+  <header class="fashion-header fashion-header--inner">
+    <a class="fashion-logo" href="fashion-shop.html">LE DIPS</a>
+
+    <nav class="fashion-nav" aria-label="Navigasi checkout">
+      <a href="fashion-shop.html">Shop</a>
+      <a href="fashion-shop.html#women">Women</a>
+      <a href="fashion-shop.html#men">Men</a>
+      <a href="fashion-shop.html#promo">Promo</a>
+    </nav>
+
+    <a class="fashion-cart-link" href="fashion-cart.html" aria-label="Buka keranjang">
+      Cart
+      <span class="fashion-cart-count" data-cart-count>0</span>
+    </a>
+  </header>
+
+  <main class="fashion-checkout-layout" id="fashion-checkout-page">
+    <section class="checkout-panel" aria-labelledby="checkout-title" id="checkout-form-panel">
+      <h1 id="checkout-title">Checkout</h1>
+
+      <form id="fashion-checkout-form" novalidate>
+        <fieldset>
+          <legend>Data Penerima</legend>
+          <div class="checkout-grid-two">
+            <div class="field-group">
+              <label for="buyer-name">Nama Lengkap*</label>
+              <input id="buyer-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field-group">
+              <label for="buyer-phone">Nomor WhatsApp*</label>
+              <input id="buyer-phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="buyer-address">Alamat Lengkap*</label>
+            <textarea id="buyer-address" name="address" rows="3" required></textarea>
+          </div>
+
+          <div class="field-group">
+            <label for="buyer-note">Catatan Pesanan (Opsional)</label>
+            <textarea id="buyer-note" name="note" rows="2"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Metode Pengiriman</legend>
+          <label class="option-row">
+            <input type="radio" name="shipping" value="regular" data-cost="18000" checked>
+            <span>Reguler (2-4 hari) - Rp18.000</span>
+          </label>
+          <label class="option-row">
+            <input type="radio" name="shipping" value="express" data-cost="32000">
+            <span>Express (1-2 hari) - Rp32.000</span>
+          </label>
+          <label class="option-row">
+            <input type="radio" name="shipping" value="same-day" data-cost="50000">
+            <span>Same Day (kota tertentu) - Rp50.000</span>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Metode Pembayaran</legend>
+
+          <div class="payment-method-grid" role="radiogroup" aria-label="Pilih metode pembayaran utama">
+            <label class="option-row option-row--boxed">
+              <input type="radio" name="payment_method" value="bank" checked>
+              <span>Transfer Bank</span>
+            </label>
+            <label class="option-row option-row--boxed">
+              <input type="radio" name="payment_method" value="ewallet">
+              <span>E-Wallet</span>
+            </label>
+            <label class="option-row option-row--boxed">
+              <input type="radio" name="payment_method" value="qris">
+              <span>QRIS</span>
+            </label>
+          </div>
+
+          <div class="payment-panel" data-payment-panel="bank">
+            <h3>Pilih Bank Tujuan</h3>
+            <label class="option-row">
+              <input type="radio" name="bank_code" value="BCA" checked>
+              <span>BCA</span>
+            </label>
+            <label class="option-row">
+              <input type="radio" name="bank_code" value="BRI">
+              <span>BRI</span>
+            </label>
+            <label class="option-row">
+              <input type="radio" name="bank_code" value="MANDIRI">
+              <span>Mandiri</span>
+            </label>
+          </div>
+
+          <div class="payment-panel" data-payment-panel="ewallet" hidden>
+            <h3>Pilih E-Wallet</h3>
+            <label class="option-row">
+              <input type="radio" name="ewallet_code" value="OVO" checked>
+              <span>OVO</span>
+            </label>
+            <label class="option-row">
+              <input type="radio" name="ewallet_code" value="GOPAY">
+              <span>GoPay</span>
+            </label>
+            <label class="option-row">
+              <input type="radio" name="ewallet_code" value="DANA">
+              <span>DANA</span>
+            </label>
+          </div>
+
+          <div class="payment-panel" data-payment-panel="qris" hidden>
+            <h3>Bayar via QRIS</h3>
+            <p>Setelah checkout selesai, QR pembayaran akan ditampilkan pada halaman ringkasan.</p>
+          </div>
+        </fieldset>
+
+        <p class="form-error" id="checkout-error" role="alert" aria-live="polite"></p>
+        <button class="fashion-btn" type="submit" id="place-order-btn">Buat Pesanan</button>
+      </form>
+    </section>
+
+    <aside class="summary-panel" aria-labelledby="checkout-summary-title" id="checkout-summary-panel">
+      <h2 id="checkout-summary-title">Ringkasan Belanja</h2>
+      <div id="checkout-items"></div>
+
+      <dl class="summary-list">
+        <div>
+          <dt>Subtotal</dt>
+          <dd id="checkout-subtotal">Rp0</dd>
+        </div>
+        <div>
+          <dt>Ongkir</dt>
+          <dd id="checkout-shipping">Rp0</dd>
+        </div>
+        <div>
+          <dt>Biaya Layanan</dt>
+          <dd id="checkout-service">Rp0</dd>
+        </div>
+        <div>
+          <dt>Kode Unik</dt>
+          <dd id="checkout-unique">Rp0</dd>
+        </div>
+        <div class="is-total">
+          <dt>Total Pembayaran</dt>
+          <dd id="checkout-total">Rp0</dd>
+        </div>
+      </dl>
+    </aside>
+
+    <template id="fashion-checkout-empty-template">
+      <section class="empty-state empty-state--wide">
+        <h2>Keranjang kosong</h2>
+        <p>Isi keranjang terlebih dahulu sebelum melanjutkan ke checkout.</p>
+        <a class="fashion-btn" href="fashion-shop.html">Belanja Sekarang</a>
+      </section>
+    </template>
+  </main>
+
+  <script src="../js/fashion-shop.js"></script>
+</body>
+</html>

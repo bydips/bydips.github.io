@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fashion shop online demo - katalog bydips.">
+  <title>Fashion Shop | bydips</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/general/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/fashion-shop.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DQQ2PNPYK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-2DQQ2PNPYK");
+  </script>
+</head>
+<body class="fashion-page" data-page="shop">
+  <header class="fashion-header">
+    <a class="fashion-logo" href="fashion-shop.html" aria-label="Kembali ke beranda fashion">
+      LE DIPS
+    </a>
+
+    <nav class="fashion-nav" aria-label="Navigasi utama fashion">
+      <a href="fashion-shop.html#women">Women</a>
+      <a href="fashion-shop.html#men">Men</a>
+      <a href="fashion-shop.html#promo">Promo</a>
+    </nav>
+
+    <a class="fashion-cart-link" href="fashion-cart.html" aria-label="Buka keranjang">
+      Cart
+      <span class="fashion-cart-count" data-cart-count>0</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="fashion-hero" id="top">
+      <div class="fashion-hero-copy">
+        <p class="fashion-micro">Gift this season</p>
+        <h1>WOMEN'S NEW IN</h1>
+        <p>Koleksi terbaru untuk tampilan harian yang effortless, modern, dan nyaman dipakai sepanjang hari.</p>
+        <a href="#women" class="fashion-btn">Shop Now</a>
+      </div>
+
+      <div class="fashion-hero-media" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1300&q=80"
+          alt="Model fashion wanita"
+          width="1300"
+          height="1600"
+          loading="eager"
+        >
+      </div>
+    </section>
+
+    <section class="fashion-catalog" id="women">
+      <div class="fashion-heading">
+        <p class="fashion-micro">Open the closet</p>
+        <h2>Women</h2>
+      </div>
+      <div class="fashion-tabs" data-section="women" role="tablist" aria-label="Filter produk women">
+        <button type="button" role="tab" class="is-active" data-filter="clothing" aria-selected="true">Clothing</button>
+        <button type="button" role="tab" data-filter="shoes" aria-selected="false">Shoes</button>
+        <button type="button" role="tab" data-filter="accessories" aria-selected="false">Accessories</button>
+      </div>
+      <div class="fashion-product-grid" id="women-grid"></div>
+    </section>
+
+    <section class="fashion-promo" id="promo">
+      <article class="promo-card">
+        <img
+          src="https://images.unsplash.com/photo-1747264464294-657fa7b1e1b1?auto=format&fit=crop&w=1200&q=80"
+          alt="Summer collection"
+          width="1200"
+          height="800"
+          loading="lazy"
+        >
+        <div class="promo-overlay">
+          <h3>Summer Collection</h3>
+          <a class="fashion-btn fashion-btn--small" href="#women">Shop Now</a>
+        </div>
+      </article>
+
+      <article class="promo-card">
+        <img
+          src="https://images.unsplash.com/photo-1657980271395-9a6a5d99667b?auto=format&fit=crop&w=1200&q=80"
+          alt="Weekend deal"
+          width="1200"
+          height="800"
+          loading="lazy"
+        >
+        <div class="promo-overlay">
+          <h3>Weekend Deal</h3>
+          <a class="fashion-btn fashion-btn--small" href="#men">Shop Now</a>
+        </div>
+      </article>
+
+      <article class="promo-card">
+        <img
+          src="https://images.unsplash.com/photo-1601762603339-fd61e28b698a?auto=format&fit=crop&w=1200&q=80"
+          alt="Last Minute deal"
+          width="1200"
+          height="800"
+          loading="lazy"
+        >
+        <div class="promo-overlay">
+          <h3>Last Minute Deal</h3>
+          <a class="fashion-btn fashion-btn--small" href="#men">Shop Now</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="fashion-hero fashion-hero--men" id="men">
+      <div class="fashion-hero-copy">
+        <p class="fashion-micro">Selected style</p>
+        <h1>MEN'S NEW IN</h1>
+        <p>Rangkaian essentials pria dengan siluet clean dan material premium untuk gaya smart casual.</p>
+        <a href="#men-products" class="fashion-btn">Shop Now</a>
+      </div>
+
+      <div class="fashion-hero-media" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=1300&q=80"
+          alt="Model fashion pria"
+          width="1300"
+          height="1600"
+          loading="lazy"
+        >
+      </div>
+    </section>
+
+    <section class="fashion-catalog" id="men-products">
+      <div class="fashion-heading">
+        <p class="fashion-micro">Daily essentials</p>
+        <h2>Men</h2>
+      </div>
+      <div class="fashion-tabs" data-section="men" role="tablist" aria-label="Filter produk men">
+        <button type="button" role="tab" class="is-active" data-filter="clothing" aria-selected="true">Clothing</button>
+        <button type="button" role="tab" data-filter="basic" aria-selected="false">Basic</button>
+        <button type="button" role="tab" data-filter="outerwear" aria-selected="false">Outerwear</button>
+      </div>
+      <div class="fashion-product-grid" id="men-grid"></div>
+    </section>
+
+    <section class="fashion-service-strip" aria-label="Keunggulan layanan">
+      <article>
+        <h3>Free Shipping & Return</h3>
+        <p>Gratis ongkir untuk minimum belanja Rp 450.000.</p>
+      </article>
+      <article>
+        <h3>Money Guarantee</h3>
+        <p>Jaminan pengembalian dana maksimal 7 hari.</p>
+      </article>
+      <article>
+        <h3>Online Support</h3>
+        <p>Tim kami siap bantu setiap hari pukul 09.00-21.00.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="fashion-footer">
+    <div class="fashion-footer-grid">
+      <div>
+        <h4>Store Info</h4>
+        <p>Jl. Anggrek No. 21, Bandung<br>hello@bydips.com</p>
+      </div>
+      <div>
+        <h4>Customer Care</h4>
+        <p><a href="https://wa.me/6281234567890">+62 812 3456 7890</a><br><a href="mailto:hello@bydips.com">hello@bydips.com</a></p>
+      </div>
+      <div>
+        <h4>Quick Link</h4>
+        <p><a href="fashion-cart.html">Keranjang Anda</a><br><a href="../katalog.html">Kembali ke Katalog</a></p>
+      </div>
+    </div>
+    <p class="fashion-copyright">&copy; <span id="fashion-year"></span> LE DIPS. Contoh landing page dari <a href="../index.html">bydips</a> | <a href="../contact.html">Butuh yang serupa?</a></p>
+  </footer>
+
+  <script src="../js/fashion-shop.js"></script>
+</body>
+</html>

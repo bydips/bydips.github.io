@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detail produk fashion online - katalog bydips.">
+  <title>Fashion Product Detail | bydips</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/general/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/fashion-shop.css">
+</head>
+<body class="fashion-page" data-page="details">
+  <header class="fashion-header fashion-header--inner">
+    <a class="fashion-logo" href="fashion-shop.html">LE DIPS</a>
+
+    <nav class="fashion-nav" aria-label="Navigasi detail produk">
+      <a href="fashion-shop.html">Shop</a>
+      <a href="fashion-shop.html#women">Women</a>
+      <a href="fashion-shop.html#men">Men</a>
+      <a href="../katalog.html">Katalog</a>
+    </nav>
+
+    <a class="fashion-cart-link" href="fashion-cart.html" aria-label="Buka keranjang">
+      Cart
+      <span class="fashion-cart-count" data-cart-count>0</span>
+    </a>
+  </header>
+
+  <main class="fashion-detail-wrap" id="fashion-detail-page">
+    <section class="fashion-detail" id="fashion-detail-content"></section>
+  </main>
+
+  <template id="fashion-detail-template">
+    <div class="detail-media">
+      <img id="detail-image" src="" alt="" width="1000" height="1300" loading="eager">
+    </div>
+
+    <div class="detail-content">
+      <p class="fashion-micro" id="detail-category"></p>
+      <h1 id="detail-name"></h1>
+      <p class="detail-price" id="detail-price"></p>
+      <p class="detail-description" id="detail-description"></p>
+
+      <form class="detail-form" id="add-to-cart-form" novalidate>
+        <div class="detail-field">
+          <label for="detail-size">Pilih Ukuran</label>
+          <select id="detail-size" name="size" required></select>
+        </div>
+
+        <div class="detail-field">
+          <label for="detail-color">Pilih Warna</label>
+          <select id="detail-color" name="color" required></select>
+        </div>
+
+        <div class="detail-qty-row">
+          <span>Jumlah</span>
+          <div class="qty-control" role="group" aria-label="Ubah jumlah pembelian">
+            <button type="button" class="qty-btn" data-qty-action="decrease" aria-label="Kurangi jumlah">-</button>
+            <input id="detail-qty" name="qty" type="number" min="1" value="1" inputmode="numeric">
+            <button type="button" class="qty-btn" data-qty-action="increase" aria-label="Tambah jumlah">+</button>
+          </div>
+        </div>
+
+        <p class="detail-stock">Stok tersedia dan siap kirim dalam 24 jam.</p>
+
+        <div class="detail-actions">
+          <button class="fashion-btn" type="submit">Add To Cart</button>
+        </div>
+      </form>
+
+      <p class="form-error" id="detail-form-error" role="alert" aria-live="polite"></p>
+
+      <div class="inline-toast" id="add-to-cart-toast" role="status" aria-live="polite" hidden>
+        Produk berhasil masuk ke keranjang.
+        <div class="inline-toast-actions">
+          <a href="fashion-cart.html" class="fashion-btn fashion-btn--small">Lihat Keranjang</a>
+          <a href="fashion-shop.html" class="fashion-btn fashion-btn--small fashion-btn--ghost">Lanjut Belanja</a>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="fashion-detail-empty-template">
+    <section class="empty-state">
+      <h1>Produk tidak ditemukan</h1>
+      <p>Maaf, produk yang Anda cari tidak tersedia atau link sudah tidak aktif.</p>
+      <a class="fashion-btn" href="fashion-shop.html">Kembali ke Shop</a>
+    </section>
+  </template>
+
+  <script src="../js/fashion-shop.js"></script>
+</body>
+</html>
