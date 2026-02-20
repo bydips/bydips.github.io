@@ -1005,8 +1005,12 @@ legend {
 
   .fashion-detail {
     display: flex;
-    align-items: stretch;
+    flex-direction: column;
     gap: 16px;
+  }
+
+  .detail-media {
+    min-height: 320px;
   }
 
   .cart-item {
