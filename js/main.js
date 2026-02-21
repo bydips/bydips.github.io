@@ -116,7 +116,9 @@ if (contactForm) {
       }
 
       setStatus('Pesan berhasil terkirim. Terima kasih, kami akan segera menghubungi Anda.', 'is-success');
-      if (typeof gtag === 'function') {
+      console.log('GENERATE LEAD TRIGGERED');
+
+if (typeof gtag === 'function') {
   gtag('event', 'generate_lead', {
     form_name: 'contact_form'
   });
