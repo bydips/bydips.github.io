@@ -116,6 +116,12 @@ if (contactForm) {
       }
 
       setStatus('Pesan berhasil terkirim. Terima kasih, kami akan segera menghubungi Anda.', 'is-success');
+      if (typeof gtag === 'function') {
+  gtag('event', 'generate_lead', {
+    form_name: 'contact_form'
+  });
+}
+
       contactForm.reset();
     } catch (error) {
       setStatus('Pesan belum terkirim. Silakan coba lagi dalam beberapa saat.', 'is-error');
