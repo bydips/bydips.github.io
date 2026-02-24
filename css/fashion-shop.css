@@ -607,8 +607,8 @@ legend {
 
 .cart-item .qty-control input,
 .cart-item-qty {
-  border-inline: 0;
-  border-radius: 0;
+  border-inline: 1px solid var(--fashion-line);
+  border-radius: 999px;
 }
 
 .detail-stock {
@@ -734,18 +734,38 @@ legend {
 }
 
 .cart-item .qty-control {
-  grid-template-columns: 32px 52px 32px;
+  grid-template-columns: 34px 56px 34px;
+  gap: 6px;
 }
 
 .cart-item .qty-btn,
 .cart-item .cart-item-qty {
-  min-height: 36px;
+  min-height: 34px;
 }
 
 .cart-item .qty-btn {
+  width: 34px;
   border: 1px solid var(--fashion-line);
   background: var(--fashion-surface);
+  border-radius: 999px;
+  color: var(--fashion-accent);
+  font-size: 0.95rem;
+  line-height: 1;
   cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.cart-item .qty-btn:hover {
+  border-color: var(--fashion-accent-soft);
+  color: var(--fashion-accent-soft);
+}
+
+.cart-item .cart-item-qty {
+  border: 1px solid var(--fashion-line);
+  border-radius: 999px;
+  background: var(--fashion-surface-alt);
+  font-weight: 600;
+  padding: 6px 8px;
 }
 
 .cart-item-subtotal {
