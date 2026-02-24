@@ -63,75 +63,141 @@ permalink: /katalog/fashion-shop/checkout/
           </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="shipping-methods">
           <legend>Metode Pengiriman</legend>
-          <label class="option-row">
+          <label class="shipping-option-card">
             <input type="radio" name="shipping" value="regular" data-cost="18000" checked>
-            <span>Reguler (2-4 hari) - Rp18.000</span>
+            <span class="shipping-option-radio" aria-hidden="true"></span>
+            <span class="shipping-option-name">Reguler (2-4 hari)</span>
+            <span class="shipping-option-fee">Rp18.000</span>
           </label>
-          <label class="option-row">
+          <label class="shipping-option-card">
             <input type="radio" name="shipping" value="express" data-cost="32000">
-            <span>Express (1-2 hari) - Rp32.000</span>
+            <span class="shipping-option-radio" aria-hidden="true"></span>
+            <span class="shipping-option-name">Express (1-2 hari)</span>
+            <span class="shipping-option-fee">Rp32.000</span>
           </label>
-          <label class="option-row">
+          <label class="shipping-option-card">
             <input type="radio" name="shipping" value="same-day" data-cost="50000">
-            <span>Same Day (kota tertentu) - Rp50.000</span>
+            <span class="shipping-option-radio" aria-hidden="true"></span>
+            <span class="shipping-option-name">Same Day (kota tertentu)</span>
+            <span class="shipping-option-fee">Rp50.000</span>
           </label>
         </fieldset>
 
         <fieldset>
           <legend>Metode Pembayaran</legend>
+          <div class="payment-methods" role="radiogroup" aria-label="Pilih metode pembayaran">
+            <section class="payment-group is-selected" data-payment-group="bank">
+              <button type="button" class="payment-group-title" data-payment-group-title>
+                <span class="payment-group-bullet" aria-hidden="true"></span>
+                Transfer Bank
+              </button>
 
-          <div class="payment-method-grid" role="radiogroup" aria-label="Pilih metode pembayaran utama">
-            <label class="option-row option-row--boxed">
-              <input type="radio" name="payment_method" value="bank" checked>
-              <span>Transfer Bank</span>
-            </label>
-            <label class="option-row option-row--boxed">
-              <input type="radio" name="payment_method" value="ewallet">
-              <span>E-Wallet</span>
-            </label>
-            <label class="option-row option-row--boxed">
-              <input type="radio" name="payment_method" value="qris">
-              <span>QRIS</span>
-            </label>
-          </div>
+              <div class="payment-group-body" data-payment-group-body>
+                <div class="payment-option-list">
+                  <label class="payment-option-card">
+                    <input type="radio" name="payment_code" value="BCA" data-payment-method="bank" checked>
+                    <span class="payment-option-radio" aria-hidden="true"></span>
+                    <span class="payment-option-name">BCA - 1234567 PT LE DIPS</span>
+                    <img class="payment-option-logo" src="/assets/images/katalog/fashion/logo-bca.webp" alt="Logo BCA" width="96" height="28" loading="lazy">
+                  </label>
 
-          <div class="payment-panel" data-payment-panel="bank">
-            <h3>Pilih Bank Tujuan</h3>
-            <label class="option-row">
-              <input type="radio" name="bank_code" value="BCA" checked>
-              <span>BCA</span>
-            </label>
-            <label class="option-row">
-              <input type="radio" name="bank_code" value="BRI">
-              <span>BRI</span>
-            </label>
-            <label class="option-row">
-              <input type="radio" name="bank_code" value="MANDIRI">
-              <span>Mandiri</span>
-            </label>
-          </div>
+                  <label class="payment-option-card">
+                    <input type="radio" name="payment_code" value="MANDIRI" data-payment-method="bank">
+                    <span class="payment-option-radio" aria-hidden="true"></span>
+                    <span class="payment-option-name">Mandiri - 1234567 PT LE DIPS</span>
+                    <img class="payment-option-logo" src="/assets/images/katalog/fashion/logo-mandiri.webp" alt="Logo Mandiri" width="96" height="28" loading="lazy">
+                  </label>
 
-          <div class="payment-panel" data-payment-panel="ewallet" hidden>
-            <h3>Pilih E-Wallet</h3>
-            <label class="option-row">
-              <input type="radio" name="ewallet_code" value="OVO" checked>
-              <span>OVO</span>
-            </label>
-            <label class="option-row">
-              <input type="radio" name="ewallet_code" value="GOPAY">
-              <span>GoPay</span>
-            </label>
-            <label class="option-row">
-              <input type="radio" name="ewallet_code" value="DANA">
-              <span>DANA</span>
-            </label>
-          </div>
+                  <label class="payment-option-card">
+                    <input type="radio" name="payment_code" value="BRI" data-payment-method="bank">
+                    <span class="payment-option-radio" aria-hidden="true"></span>
+                    <span class="payment-option-name">BRI - 1234567 PT LE DIPS</span>
+                    <img class="payment-option-logo" src="/assets/images/katalog/fashion/logo-bri.webp" alt="Logo BRIVA" width="96" height="28" loading="lazy">
+                  </label>
 
-          <div class="payment-panel" data-payment-panel="qris" hidden>
-            <h3>Bayar via QRIS</h3>
-            <p>Setelah checkout selesai, QR pembayaran akan ditampilkan pada halaman ringkasan.</p>
+                  <label class="payment-option-card">
+                    <input type="radio" name="payment_code" value="BNI" data-payment-method="bank">
+                    <span class="payment-option-radio" aria-hidden="true"></span>
+                    <span class="payment-option-name">BNI - 1234567 PT LE DIPS</span>
+                    <img class="payment-option-logo" src="/assets/images/katalog/fashion/logo-bni.webp" alt="Logo BNI" width="96" height="28" loading="lazy">
+                  </label>
+
+                  <label class="payment-option-card">
+                    <input type="radio" name="payment_code" value="MAYBANK" data-payment-method="bank">
+                    <span class="payment-option-radio" aria-hidden="true"></span>
+                    <span class="payment-option-name">Maybank - 1234567 PT LE DIPS</span>
+                    <img class="payment-option-logo" src="/assets/images/katalog/fashion/logo-maybank.webp" alt="Logo Maybank" width="96" height="28" loading="lazy">
+                  </label>
+                </div>
+              </div>
+            </section>
+
+            <section class="payment-group" data-payment-group="ewallet">
+              <button type="button" class="payment-group-title" data-payment-group-title>
+                <span class="payment-group-bullet" aria-hidden="true"></span>
+                E-Wallet
+              </button>
+
+              <div class="payment-group-body" data-payment-group-body hidden>
+                <div class="payment-option-list">
+                  <label class="payment-option-card">
+                    <input type="radio" name="payment_code" value="GOPAY" data-payment-method="ewallet">
+                    <span class="payment-option-radio" aria-hidden="true"></span>
+                    <span class="payment-option-name">GoPay</span>
+                    <img class="payment-option-logo" src="/assets/images/katalog/fashion/logo-gopay.webp" alt="Logo GoPay" width="96" height="28" loading="lazy">
+                  </label>
+
+                  <label class="payment-option-card">
+                    <input type="radio" name="payment_code" value="OVO" data-payment-method="ewallet">
+                    <span class="payment-option-radio" aria-hidden="true"></span>
+                    <span class="payment-option-name">OVO</span>
+                    <img class="payment-option-logo" src="/assets/images/katalog/fashion/logo-ovo.webp" alt="Logo OVO" width="96" height="28" loading="lazy">
+                  </label>
+
+                  <label class="payment-option-card">
+                    <input type="radio" name="payment_code" value="DANA" data-payment-method="ewallet">
+                    <span class="payment-option-radio" aria-hidden="true"></span>
+                    <span class="payment-option-name">DANA</span>
+                    <img class="payment-option-logo" src="/assets/images/katalog/fashion/logo-dana.webp" alt="Logo DANA" width="96" height="28" loading="lazy">
+                  </label>
+
+                  <label class="payment-option-card">
+                    <input type="radio" name="payment_code" value="SHOPEEPAY" data-payment-method="ewallet">
+                    <span class="payment-option-radio" aria-hidden="true"></span>
+                    <span class="payment-option-name">ShopeePay</span>
+                    <img class="payment-option-logo" src="/assets/images/katalog/fashion/logo-shopeepay.webp" alt="Logo ShopeePay" width="96" height="28" loading="lazy">
+                  </label>
+
+                  <label class="payment-option-card">
+                    <input type="radio" name="payment_code" value="LINKAJA" data-payment-method="ewallet">
+                    <span class="payment-option-radio" aria-hidden="true"></span>
+                    <span class="payment-option-name">LinkAja</span>
+                    <img class="payment-option-logo" src="/assets/images/katalog/fashion/logo-linkaja.webp" alt="Logo LinkAja" width="96" height="28" loading="lazy">
+                  </label>
+                </div>
+              </div>
+            </section>
+
+            <section class="payment-group" data-payment-group="qris">
+              <button type="button" class="payment-group-title" data-payment-group-title>
+                <span class="payment-group-bullet" aria-hidden="true"></span>
+                QRIS
+              </button>
+
+              <div class="payment-group-body" data-payment-group-body hidden>
+                <label class="payment-option-card payment-option-card--single">
+                  <input type="radio" name="payment_code" value="QRIS" data-payment-method="qris">
+                  <span class="payment-option-radio" aria-hidden="true"></span>
+                  <span class="payment-option-name">Bayar dengan QRIS</span>
+                  <img class="payment-option-logo" src="/assets/images/katalog/fashion/logo-qris.webp" alt="Logo QRIS" width="96" height="28" loading="lazy">
+                </label>
+                <div class="payment-qris-preview">
+                  <img src="/assets/images/katalog/fashion/qris-code.webp" alt="Dummy QRIS" width="220" height="220" loading="lazy">
+                </div>
+              </div>
+            </section>
           </div>
         </fieldset>
 

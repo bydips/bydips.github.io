@@ -52,12 +52,14 @@ permalink: /katalog/fashion-shop/details/
       <form class="detail-form" id="add-to-cart-form" novalidate>
         <div class="detail-field">
           <label for="detail-size">Pilih Ukuran</label>
-          <select id="detail-size" name="size" required></select>
+          <div class="detail-option-list" id="detail-size-options" role="group" aria-label="Pilih ukuran"></div>
+          <input id="detail-size" name="size" type="hidden" required>
         </div>
 
         <div class="detail-field">
           <label for="detail-color">Pilih Warna</label>
-          <select id="detail-color" name="color" required></select>
+          <div class="detail-option-list" id="detail-color-options" role="group" aria-label="Pilih warna"></div>
+          <input id="detail-color" name="color" type="hidden" required>
         </div>
 
         <div class="detail-qty-row">

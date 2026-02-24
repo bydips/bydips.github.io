@@ -241,13 +241,20 @@
   var BANK_ACCOUNTS = {
     BCA: { name: 'PT LE DIPS Fashion', number: '1234567890' },
     BRI: { name: 'PT LE DIPS Fashion', number: '987601234567' },
-    MANDIRI: { name: 'PT LE DIPS Fashion', number: '1350011223344' }
+    MANDIRI: { name: 'PT LE DIPS Fashion', number: '1350011223344' },
+    BNI: { name: 'PT LE DIPS Fashion', number: '98000011223344' },
+    MAYBANK: { name: 'PT LE DIPS Fashion', number: '800123456789' },
+    OTHER_VA: { name: 'PT LE DIPS Fashion', number: '880001234567890' },
+    TRANSFER_ALL: { name: 'PT LE DIPS Fashion', number: '1234567890' },
+    ATM: { name: 'PT LE DIPS Fashion', number: '1234567890' }
   };
 
   var EWALLET_ACCOUNTS = {
     OVO: { holder: 'LE DIPS Official', number: '0812-3344-5566' },
     GOPAY: { holder: 'LE DIPS Official', number: '0812-8811-3344' },
-    DANA: { holder: 'LE DIPS Official', number: '0813-5566-7788' }
+    DANA: { holder: 'LE DIPS Official', number: '0813-5566-7788' },
+    SHOPEEPAY: { holder: 'LE DIPS Official', number: '0812-0022-1144' },
+    LINKAJA: { holder: 'LE DIPS Official', number: '0812-2299-8800' }
   };
 
   var QR_PAYLOAD = '00020101021226670016COM.NOBUBANK.WWW0118936005030000087914021455140012345670315ID.CO.QRIS.WWW0215ID10232544778110303UKE5204581253033605405100005802ID5913LE DIPS STORE6010BANDUNG6105401236304A13F';
@@ -458,6 +465,8 @@
     var name = fragment.querySelector('#detail-name');
     var price = fragment.querySelector('#detail-price');
     var description = fragment.querySelector('#detail-description');
+    var sizeOptions = fragment.querySelector('#detail-size-options');
+    var colorOptions = fragment.querySelector('#detail-color-options');
     var sizeSelect = fragment.querySelector('#detail-size');
     var colorSelect = fragment.querySelector('#detail-color');
     var qtyInput = fragment.querySelector('#detail-qty');
@@ -465,7 +474,7 @@
     var errorEl = fragment.querySelector('#detail-form-error');
     var toastEl = fragment.querySelector('#add-to-cart-toast');
 
-    if (!image || !category || !name || !price || !description || !sizeSelect || !colorSelect || !qtyInput || !form || !errorEl || !toastEl) {
+    if (!image || !category || !name || !price || !description || !sizeOptions || !colorOptions || !sizeSelect || !colorSelect || !qtyInput || !form || !errorEl || !toastEl) {
       return;
     }
 
@@ -476,13 +485,38 @@
     price.textContent = formatIDR(product.price);
     description.textContent = product.description;
 
-    sizeSelect.innerHTML = product.sizes.map(function (size) {
-      return '<option value="' + escapeHTML(size) + '">' + escapeHTML(size) + '</option>';
-    }).join('');
+    function preferredValue(options, preferred) {
+      var matched = preferred.find(function (value) {
+        return options.indexOf(value) > -1;
+      });
+      return matched || options[0] || '';
+    }
 
-    colorSelect.innerHTML = product.colors.map(function (color) {
-      return '<option value="' + escapeHTML(color) + '">' + escapeHTML(color) + '</option>';
-    }).join('');
+    function renderOptionButtons(container, hiddenInput, options, preferredDefaults) {
+      var selected = preferredValue(options, preferredDefaults);
+      hiddenInput.value = selected;
+
+      container.innerHTML = options.map(function (option) {
+        var isSelected = option === selected;
+        return '<button type="button" class="detail-option-chip' + (isSelected ? ' is-selected' : '') + '" data-option-value="' + escapeHTML(option) + '" aria-pressed="' + String(isSelected) + '">' + escapeHTML(option) + '</button>';
+      }).join('');
+
+      container.querySelectorAll('[data-option-value]').forEach(function (button) {
+        button.addEventListener('click', function () {
+          var nextValue = button.getAttribute('data-option-value') || '';
+          hiddenInput.value = nextValue;
+
+          container.querySelectorAll('[data-option-value]').forEach(function (targetButton) {
+            var active = targetButton === button;
+            targetButton.classList.toggle('is-selected', active);
+            targetButton.setAttribute('aria-pressed', String(active));
+          });
+        });
+      });
+    }
+
+    renderOptionButtons(sizeOptions, sizeSelect, product.sizes, ['M']);
+    renderOptionButtons(colorOptions, colorSelect, product.colors, ['Black']);
 
     fragment.querySelectorAll('[data-qty-action]').forEach(function (button) {
       button.addEventListener('click', function () {
@@ -720,8 +754,9 @@
     renderCheckoutItems(cart);
 
     var shippingInputs = form.querySelectorAll('input[name="shipping"]');
-    var paymentInputs = form.querySelectorAll('input[name="payment_method"]');
-    var paymentPanels = form.querySelectorAll('[data-payment-panel]');
+    var paymentOptionInputs = form.querySelectorAll('input[name="payment_code"]');
+    var paymentGroups = Array.prototype.slice.call(form.querySelectorAll('.payment-group'));
+    var paymentGroupTitles = form.querySelectorAll('[data-payment-group-title]');
     var errorEl = document.getElementById('checkout-error');
     var uniqueCode = Math.floor(Math.random() * 900) + 100;
 
@@ -731,18 +766,43 @@
       return Number(checked.getAttribute('data-cost')) || 0;
     }
 
-    function selectedPaymentMethod() {
-      var checked = pickChecked('payment_method');
-      return checked ? checked.value : 'bank';
+    function updateShippingSelectionState() {
+      form.querySelectorAll('.shipping-option-card').forEach(function (option) {
+        var input = option.querySelector('input[name="shipping"]');
+        option.classList.toggle('is-selected', Boolean(input && input.checked));
+      });
     }
 
-    function updatePaymentPanels() {
-      var method = selectedPaymentMethod();
-      paymentPanels.forEach(function (panel) {
-        var panelMethod = panel.getAttribute('data-payment-panel');
-        var active = panelMethod === method;
-        panel.hidden = !active;
+    function activatePaymentGroup(group, shouldSelectFirst) {
+      if (!group) return;
+
+      paymentGroups.forEach(function (targetGroup) {
+        var isActive = targetGroup === group;
+        targetGroup.classList.toggle('is-selected', isActive);
+        var body = targetGroup.querySelector('[data-payment-group-body]');
+        if (body) body.hidden = !isActive;
       });
+
+      if (shouldSelectFirst) {
+        var firstOption = group.querySelector('input[name="payment_code"]');
+        if (firstOption) firstOption.checked = true;
+      }
+    }
+
+    function updatePaymentSelectionState() {
+      var selectedInput = pickChecked('payment_code');
+
+      if (selectedInput) {
+        var selectedGroup = selectedInput.closest('.payment-group');
+        activatePaymentGroup(selectedGroup, false);
+      }
+
+      form.querySelectorAll('.payment-option-card, .payment-option-inline').forEach(function (option) {
+        var input = option.querySelector('input[name="payment_code"]');
+        option.classList.toggle('is-selected', Boolean(input && input.checked));
+      });
+
+      return selectedInput;
     }
 
     function updateCheckoutSummary() {
@@ -773,14 +833,26 @@
     }
 
     shippingInputs.forEach(function (input) {
-      input.addEventListener('change', updateCheckoutSummary);
+      input.addEventListener('change', function () {
+        updateShippingSelectionState();
+        updateCheckoutSummary();
+      });
     });
 
-    paymentInputs.forEach(function (input) {
-      input.addEventListener('change', updatePaymentPanels);
+    paymentOptionInputs.forEach(function (input) {
+      input.addEventListener('change', updatePaymentSelectionState);
     });
 
-    updatePaymentPanels();
+    paymentGroupTitles.forEach(function (title) {
+      title.addEventListener('click', function () {
+        var group = title.closest('.payment-group');
+        activatePaymentGroup(group, true);
+        updatePaymentSelectionState();
+      });
+    });
+
+    updateShippingSelectionState();
+    updatePaymentSelectionState();
     updateCheckoutSummary();
 
     form.addEventListener('submit', function (event) {
@@ -793,19 +865,15 @@
         return;
       }
 
-      var paymentMethod = selectedPaymentMethod();
-      var bankInput = pickChecked('bank_code');
-      var ewalletInput = pickChecked('ewallet_code');
+      var paymentInput = pickChecked('payment_code');
 
-      if (paymentMethod === 'bank' && !bankInput) {
-        if (errorEl) errorEl.textContent = 'Silakan pilih bank tujuan.';
+      if (!paymentInput) {
+        if (errorEl) errorEl.textContent = 'Silakan pilih metode pembayaran.';
         return;
       }
 
-      if (paymentMethod === 'ewallet' && !ewalletInput) {
-        if (errorEl) errorEl.textContent = 'Silakan pilih e-wallet tujuan.';
-        return;
-      }
+      var paymentMethod = paymentInput.getAttribute('data-payment-method') || 'bank';
+      var paymentCode = paymentInput.value;
 
       var shippingInput = pickChecked('shipping');
       if (!shippingInput) {
@@ -830,8 +898,8 @@
 
       var payment = {
         selectedMethod: paymentMethod,
-        bankCode: paymentMethod === 'bank' && bankInput ? bankInput.value : null,
-        ewalletCode: paymentMethod === 'ewallet' && ewalletInput ? ewalletInput.value : null,
+        bankCode: paymentMethod === 'bank' ? paymentCode : null,
+        ewalletCode: paymentMethod === 'ewallet' ? paymentCode : null,
         qrPayload: paymentMethod === 'qris' ? QR_PAYLOAD : null
       };
 
