@@ -356,7 +356,7 @@
 
   function productCardMarkup(product) {
     return [
-      '<a class="fashion-product-card" href="fashion-details.html?id=' + encodeURIComponent(product.id) + '">',
+      '<a class="fashion-product-card" href="/katalog/fashion-shop/details/?id=' + encodeURIComponent(product.id) + '">',
       '  <div class="fashion-product-image-wrap">',
       '    <img src="' + escapeHTML(product.image) + '" alt="' + escapeHTML(product.name) + '" width="900" height="1125" loading="lazy">',
       '  </div>',
@@ -570,7 +570,7 @@
     if (cart.length) {
       checkoutBtn.classList.remove('is-disabled');
       checkoutBtn.removeAttribute('aria-disabled');
-      checkoutBtn.setAttribute('href', 'fashion-checkout.html?from=cart');
+      checkoutBtn.setAttribute('href', '/katalog/fashion-shop/checkout/?from=cart');
     } else {
       checkoutBtn.classList.add('is-disabled');
       checkoutBtn.setAttribute('aria-disabled', 'true');
@@ -853,7 +853,7 @@
       setOrder(order);
       setCart([]);
       updateCartBadges();
-      window.location.href = 'fashion-success.html';
+      window.location.href = '/katalog/fashion-shop/success/';
     });
   }
 
