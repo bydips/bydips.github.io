@@ -283,7 +283,7 @@ button {
 }
 
 .fashion-tabs button:hover {
-  color: var(--fashion-text);
+  color: var(--fashion-muted);
   border-color: var(--fashion-accent-soft);
 }
 
