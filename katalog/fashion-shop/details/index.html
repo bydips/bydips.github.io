@@ -8,26 +8,26 @@ layout: null
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Detail produk fashion online - katalog bydips.">
   <title>Fashion Product Detail | bydips</title>
-  <link rel="icon" type="image/x-icon" href="../assets/images/general/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="/assets/images/general/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/fashion-shop.css">
+  <link rel="stylesheet" href="/css/fashion-shop.css">
   {% include tracking.html %}
   <script src="https://t.contentsquare.net/uxa/0ac8dbe8cfd45.js"></script>
 </head>
 <body class="fashion-page" data-page="details">
   <header class="fashion-header fashion-header--inner">
-    <a class="fashion-logo" href="fashion-shop.html">LE DIPS</a>
+    <a class="fashion-logo" href="/katalog/fashion-shop/">LE DIPS</a>
 
     <nav class="fashion-nav" aria-label="Navigasi detail produk">
-      <a href="fashion-shop.html">Shop</a>
-      <a href="fashion-shop.html#women">Women</a>
-      <a href="fashion-shop.html#men">Men</a>
-      <a href="../katalog.html">Katalog</a>
+      <a href="/katalog/fashion-shop/">Shop</a>
+      <a href="/katalog/fashion-shop/#women">Women</a>
+      <a href="/katalog/fashion-shop/#men">Men</a>
+      <a href="/katalog/">Katalog</a>
     </nav>
 
-    <a class="fashion-cart-link" href="fashion-cart.html" aria-label="Buka keranjang">
+    <a class="fashion-cart-link" href="/katalog/fashion-shop/cart/" aria-label="Buka keranjang">
       Cart
       <span class="fashion-cart-count" data-cart-count>0</span>
     </a>
@@ -80,8 +80,8 @@ layout: null
       <div class="inline-toast" id="add-to-cart-toast" role="status" aria-live="polite" hidden>
         Produk berhasil masuk ke keranjang.
         <div class="inline-toast-actions">
-          <a href="fashion-cart.html" class="fashion-btn fashion-btn--small">Lihat Keranjang</a>
-          <a href="fashion-shop.html" class="fashion-btn fashion-btn--small fashion-btn--ghost">Lanjut Belanja</a>
+          <a href="/katalog/fashion-shop/cart/" class="fashion-btn fashion-btn--small">Lihat Keranjang</a>
+          <a href="/katalog/fashion-shop/" class="fashion-btn fashion-btn--small fashion-btn--ghost">Lanjut Belanja</a>
         </div>
       </div>
     </div>
@@ -91,10 +91,10 @@ layout: null
     <section class="empty-state">
       <h1>Produk tidak ditemukan</h1>
       <p>Maaf, produk yang Anda cari tidak tersedia atau link sudah tidak aktif.</p>
-      <a class="fashion-btn" href="fashion-shop.html">Kembali ke Shop</a>
+      <a class="fashion-btn" href="/katalog/fashion-shop/">Kembali ke Shop</a>
     </section>
   </template>
 
-  <script src="../js/fashion-shop.js"></script>
+  <script src="/js/fashion-shop.js"></script>
 </body>
 </html>
