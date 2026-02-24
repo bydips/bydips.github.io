@@ -2,3 +2,6 @@ title: bydips
 url: "https://bydips.com"
 plugins:
   - jekyll-sitemap
+
+tracking:
+  gtag_id: "G-2DQQ2PNPYK"
