@@ -8,7 +8,7 @@
 
   var SERVICE_FEE = 3000;
   var CART_SHIPPING_ESTIMATE = 22000;
-  var ORDER_EXPIRY_HOURS = 24;
+  var ORDER_EXPIRY_HOURS = 1;
 
   var PRODUCT_LIST = [
     {
@@ -1040,7 +1040,8 @@
       '<div class="payment-block">',
       '  <p class="payment-key">Pembayaran QRIS</p>',
       '  <p>Scan QRIS di bawah ini menggunakan aplikasi mobile banking atau e-wallet Anda.</p>',
-      '  <div class="qr-placeholder">QRIS DEMO<br>Nominal: ' + escapeHTML(formatIDR(order.grandTotal)) + '</div>',
+      '  <div class="qr-placeholder"><img src="/assets/images/katalog/fashion/qris-code.webp" alt="QRIS" width="220" height="220" loading="lazy"></div>',
+      '  <p>Nominal: <strong>' + escapeHTML(formatIDR(order.grandTotal)) + '</strong></p>',
       '</div>'
     ].join('');
   }
@@ -1072,7 +1073,10 @@
     var statusEl = document.getElementById('payment-status');
 
     if (orderIdEl) orderIdEl.textContent = order.orderId || '-';
-    if (deadlineEl) deadlineEl.textContent = formatDateTimeID(order.expiresAt);
+    if (deadlineEl) {
+      var successDeadline = new Date(Date.now() + (60 * 60 * 1000));
+      deadlineEl.textContent = formatDateTimeID(successDeadline.toISOString());
+    }
     if (subtotalEl) subtotalEl.textContent = formatIDR(order.subtotal);
     if (shippingEl) shippingEl.textContent = formatIDR(order.shippingCost);
     if (serviceEl) serviceEl.textContent = formatIDR(order.serviceFee);
