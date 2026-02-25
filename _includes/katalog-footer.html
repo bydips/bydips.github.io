@@ -1,0 +1,25 @@
+<style>
+  .katalog-footer {
+    padding: 24px;
+    text-align: center;
+    font-size: 0.84rem;
+    color: #6b6b7b;
+    border-top: 1px solid #e5e0d8;
+  }
+  .katalog-footer a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .katalog-footer a:hover {
+    color: #1a1a1a;
+  }
+</style>
+<footer class="katalog-footer">
+  &copy; <span class="katalog-footer-year"></span> <a href="/">bydips</a>. Website profesional untuk UMKM | <a href="/contact/">Dapatkan website gratis</a>
+</footer>
+<script>
+  document.querySelectorAll('.katalog-footer-year').forEach(function(el) {
+    el.textContent = new Date().getFullYear();
+  });
+</script>
