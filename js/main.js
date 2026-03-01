@@ -13,7 +13,7 @@ if (revealNodes.length) {
         observer.unobserve(entry.target);
       });
     },
-    { threshold: 0.16 }
+    { threshold: 0, rootMargin: '0px 0px -40px 0px' }
   );
 
   revealNodes.forEach((node) => revealObserver.observe(node));
