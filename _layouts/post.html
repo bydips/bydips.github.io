@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ page.title }} | bydips</title>
+    <title>{% if page.seo_title %}{{ page.seo_title }} | bydips{% else %}{{ page.title }} | bydips{% endif %}</title>
     <link rel="icon" type="x-icon" href="/assets/images/general/favicon.ico" />
     <meta name="description" content="{{ page.description }}" />
     <meta property="og:title" content="{{ page.title }}" />
@@ -165,5 +165,11 @@
     </div>
 
     <script src="/js/main.js"></script>
+    <script>
+      document.querySelectorAll('.post-body a[href^="http"]').forEach(function(a) {
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener noreferrer');
+      });
+    </script>
   </body>
 </html>
