@@ -41,10 +41,10 @@ Anda bebas menentukan desainnya, isi kontennya, cara menyampaikan cerita bisnis 
 
 Website memungkinkan Anda menyampaikan lebih dari sekadar foto produk. Anda bisa menampilkan:
 
-- **Tentang kami**: siapa Anda, apa yang Anda perjuangkan
+- **[Tentang kami](/about/)**: siapa Anda, apa yang Anda perjuangkan
 - **Portofolio atau testimoni**: bukti nyata kualitas kerja Anda
 - **Halaman layanan** yang menjelaskan secara rinci apa yang Anda tawarkan
-- **Blog**: seperti artikel ini, yang membangun otoritas Anda di industri
+- **[Blog](/blog/)**: seperti artikel ini, yang membangun otoritas Anda di industri
 
 Semua ini membangun lapisan kepercayaan yang jauh lebih dalam dibandingkan sebuah postingan Instagram.
 

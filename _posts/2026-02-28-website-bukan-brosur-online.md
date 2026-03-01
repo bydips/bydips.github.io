@@ -26,9 +26,9 @@ Ini bukan brosur. Ini adalah tim penjualan yang bekerja 24 jam.
 
 Banyak UMKM yang hanya mengandalkan Tokopedia, Shopee, atau Instagram sebagai "website" mereka. Strategi ini punya risiko besar yang sering diabaikan.
 
-**Pertama, Anda tidak memiliki data pelanggan Anda sendiri.** Semua data pembeli ada di tangan platform tersebut, bukan di tangan Anda. Kalau besok platform itu tutup atau Anda dikeluarkan, Anda kehilangan segalanya.
+**Pertama, Anda tidak memiliki data pelanggan Anda sendiri.** Semua data pembeli ada di tangan platform tersebut, bukan di tangan Anda. Kalau besok platform itu tutup atau akun Anda diblokir permanen, Anda kehilangan segalanya, bukan hanya saldo yang ditahan, tapi reputasi bisnis jadi rusak, anda bisa kehilangan kepercayaan pelanggan.
 
-**Kedua, Anda bersaing langsung dengan ribuan penjual lain** di halaman yang sama. Calon pembeli bisa dengan mudah berpaling ke kompetitor hanya dengan satu klik.
+**Kedua, Anda bersaing langsung dengan ribuan penjual lain** di halaman yang sama. Calon pembeli bisa dengan mudah berpaling ke kompetitor hanya dengan satu pemicu, misalnya harga di kompetitor lebih murah 1 rupiah.
 
 **Ketiga, Anda tunduk pada aturan platform.** Komisi naik? Anda harus ikut. Algoritma berubah? Traffic Anda anjlok. Akun kena suspend? Bisnis berhenti.
 
@@ -42,15 +42,15 @@ Ada perbedaan besar antara website yang "ada" dengan website yang **bekerja**. W
 Pengunjung harus langsung paham: *"Bisnis ini jual apa? Untuk siapa? Mengapa saya harus peduli?"* Kalau ini tidak terjawab dalam 5 detik pertama, mereka pergi.
 
 ### 2. Bukti sosial yang nyata
-Testimoni pelanggan, portofolio hasil kerja, atau data nyata seperti jumlah klien yang dilayani — semua ini membangun kepercayaan lebih cepat dari kata-kata promosi manapun.
+Testimoni pelanggan, portofolio hasil kerja, atau data nyata seperti jumlah klien yang dilayani, semua ini membangun kepercayaan lebih cepat dari kata-kata promosi manapun.
 
 ### 3. Satu ajakan bertindak yang dominan
-Setiap halaman harus punya satu tujuan utama. Apakah itu "Hubungi Kami via WhatsApp", "Pesan Sekarang", atau "Konsultasi Gratis" — pengunjung harus tahu langkah selanjutnya tanpa perlu berpikir.
+Setiap halaman harus punya satu tujuan utama. Apakah itu "Hubungi Kami via WhatsApp", "Pesan Sekarang", atau "Konsultasi Gratis". Pengunjung harus tahu langkah selanjutnya tanpa perlu berpikir.
 
 ### 4. Kecepatan dan performa mobile
 Lebih dari 70% pengguna internet di Indonesia mengakses lewat ponsel. Website yang lambat atau tidak nyaman di layar kecil sama saja dengan toko yang pintunya dikunci dari luar.
 
-## Investasi, Bukan Pengeluaran
+## Teknologi Adalah Investasi, Bukan Pengeluaran
 
 Banyak pemilik UMKM ragu untuk berinvestasi di website karena melihatnya sebagai "pengeluaran". Cara pandang ini perlu digeser.
 
