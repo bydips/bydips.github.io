@@ -70,9 +70,9 @@ Data dari Google menunjukkan bahwa pencarian dengan kata kunci yang mengandung "
 
 Contoh pencarian dengan niat beli tinggi:
 
-- "Jasa pembuatan website UMKM"
 - "Website barber shop profesional"
 - "Website coffee shop modern"
+- "Website toko online"
 - "Jasa website property agent"
 
 Jika Anda menjalankan bisnis spesifik, halaman khusus seperti:
