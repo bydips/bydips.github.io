@@ -119,24 +119,25 @@
         <section class="related-posts" data-reveal>
           <p class="micro-label mono">Artikel Terkait</p>
           <h2 class="related-posts__title">Baca Juga</h2>
-          <div class="related-grid">
+          <div class="related-list">
             {% for related in related_posts %}
-            <a class="post-card" href="{{ related.url }}">
+            <a class="related-item" href="{{ related.url }}">
               {% if related.image %}
-              <figure class="post-card__img-wrap">
-                <img class="post-card__img" src="{{ related.image }}" alt="{{ related.title }}" loading="lazy" />
+              <figure class="related-item__thumb">
+                <img src="{{ related.image }}" alt="{{ related.title }}" loading="lazy" />
               </figure>
               {% endif %}
-              <div class="post-card__body">
+              <div class="related-item__content">
                 {% if related.tags %}
-                <div class="post-card__tags">
+                <div class="related-item__tags">
                   {% for tag in related.tags limit: 2 %}
                   <span class="tag-chip mono">{{ tag }}</span>
                   {% endfor %}
                 </div>
                 {% endif %}
-                <p class="post-card__title">{{ related.title }}</p>
+                <p class="related-item__title">{{ related.title }}</p>
               </div>
+              <span class="related-item__arrow">&rarr;</span>
             </a>
             {% endfor %}
           </div>
