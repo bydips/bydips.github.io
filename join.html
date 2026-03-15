@@ -33,11 +33,16 @@ permalink: /join/
       border-radius: 6px;
       font-size: 1rem;
     }
-    @media (pointer: coarse) {
-      .pdf-container { display: none; }
-      .fallback { display: flex; }
-    }
   </style>
+  <script>
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (isIOS) {
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.pdf-container').style.display = 'none';
+        document.querySelector('.fallback').style.display = 'flex';
+      });
+    }
+  </script>
 </head>
 <body>
   <div class="pdf-container">
