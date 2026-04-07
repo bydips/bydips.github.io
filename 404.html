@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Halaman Tidak Ditemukan | bydips</title>
+    <link rel="icon" type="x-icon" href="/assets/images/general/favicon.ico" />
+    <meta name="description" content="Ups, halaman yang Anda cari tidak ditemukan. Mari kembali ke halaman utama bydips." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    {% include tracking.html %}
+    <style>
+      body[data-page="404"] {
+        background: #0f0f0f;
+        --home-side-gutter: 1rem;
+        color: #ffffff;
+      }
+
+      .error-container {
+        min-height: calc(100vh - var(--topbar-space));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--home-side-gutter);
+        text-align: center;
+      }
+
+      .error-content {
+        max-width: 600px;
+      }
+
+      .error-code {
+        font-family: var(--mono);
+        font-size: clamp(3rem, 12vw, 8rem);
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, #D3FE50 0%, #b8ff2b 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .error-title {
+        font-size: clamp(1.5rem, 3vw, 2.2rem);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #ffffff;
+        line-height: 1.2;
+      }
+
+      .error-description {
+        font-size: 1rem;
+        color: #8f9288;
+        margin-bottom: 2.5rem;
+        line-height: 1.6;
+      }
+
+      .error-emoji {
+        font-size: clamp(2rem, 8vw, 4rem);
+        display: inline-block;
+        margin-bottom: 1rem;
+        animation: bounce 2s ease-in-out infinite;
+      }
+
+      .error-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.9rem 1.8rem;
+        border-radius: var(--radius-lg);
+        font-family: var(--sans);
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: none;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .btn-light {
+        background: #D3FE50;
+        color: #0f0f0f;
+      }
+
+      .btn-light:hover {
+        background: #b8ff2b;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(211, 254, 80, 0.3);
+      }
+
+      .btn-outline {
+        border: 1px solid #D3FE50;
+        color: #D3FE50;
+      }
+
+      .btn-outline:hover {
+        background: rgba(211, 254, 80, 0.1);
+        transform: translateY(-2px);
+      }
+
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+    </style>
+  </head>
+  <body data-page="404">
+    <div class="site-shell">
+      <main>
+        <section class="error-container">
+          <div class="error-content">
+            <div class="error-emoji">🚀</div>
+            <div class="error-code">404</div>
+            <h1 class="error-title">Hmm, kayaknya kita tersesat</h1>
+            <p class="error-description">
+              Halaman yang Anda cari tidak ditemukan atau sudah berpindah. Jangan khawatir, mari kita kembali ke orbit yang benar.
+            </p>
+            <div class="error-actions">
+              <a class="btn btn-light" href="/">Kembali ke Home</a>
+              <a class="btn btn-outline" href="/contact/">Hubungi Kami</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
