@@ -181,8 +181,8 @@ Mulai perjalanan digital bisnis Anda sekarang melalui [Konsultasi Gratis](/conta
 
 ## Referensi Data
 
-Google Search Central. https://developers.google.com/search/docs
+[Google Search Central](https://developers.google.com/search/docs)
 
-Think With Google. https://www.thinkwithgoogle.com
+[Think With Google](https://www.thinkwithgoogle.com)
 
-BrightEdge Research. https://www.brightedge.com/resources/research-reports
+[BrightEdge Research](https://www.brightedge.com/resources/research-reports)
