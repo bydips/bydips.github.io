@@ -141,7 +141,6 @@ Hambatan terbesar yang dihadapi UMKM dalam go digital umumnya bukan masalah tekn
 
 Bisnis yang berani go digital hari ini akan memiliki keunggulan kompetitif yang semakin sulit dikejar oleh mereka yang menunda.
 
----
 
 ## 🚀 Siap Memulai Transformasi Digital Bisnis Anda?
 

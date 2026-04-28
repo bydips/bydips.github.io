@@ -123,6 +123,7 @@ Beberapa masalah yang sering ditemukan pada website yang tidak mobile-friendly a
 
 Website yang responsif akan memberikan pengalaman pengguna yang lebih baik sekaligus meningkatkan peluang muncul di hasil pencarian.
 
+---
 
 ## Kesimpulan
 
@@ -142,6 +143,7 @@ Dengan menghindari kesalahan-kesalahan tersebut, peluang website untuk mendapatk
 
 Jika Anda ingin memiliki website bisnis yang dioptimalkan untuk SEO dan mudah ditemukan di Google, silakan kunjungi [halaman Katalog](/katalog) untuk melihat jenis layanan yang tersedia, atau hubungi kami melalui [halaman Kontak](/contact) untuk memulai konsultasi.
 
+---
 
 ## Referensi Data
 
