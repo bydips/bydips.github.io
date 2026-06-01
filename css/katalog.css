@@ -87,6 +87,9 @@
 
 .katalog-card__meta {
   padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .katalog-card__meta .mono {
@@ -108,6 +111,11 @@
   margin: 0;
   font-size: 0.84rem;
   line-height: 1.4;
+}
+
+.katalog-card__meta .btn {
+  width: 100%;
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 1024px) {
